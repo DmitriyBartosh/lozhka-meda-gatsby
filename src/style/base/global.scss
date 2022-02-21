@@ -1,0 +1,14 @@
+body {
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+}
+
+
+main {
+  width: 100%;
+  min-height: 100vh;
+}
+

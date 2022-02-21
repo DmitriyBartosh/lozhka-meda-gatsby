@@ -1,0 +1,25 @@
+.container {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px 50px;
+  width: 100%;
+  color: white;
+  background-color: #7a8566;
+  .left {
+    text-align: left;
+  }
+  .center {
+    text-align: center;
+  }
+  .right {
+    text-align: right;
+    .heycoddes {
+      position: relative;
+      a {
+        font-weight: 600;
+      }
+    }
+  }
+}

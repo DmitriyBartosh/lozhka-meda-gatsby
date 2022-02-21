@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "RobotoThin";
+  src: url(../fonts/Roboto-Thin.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoLight";
+  src: url(../fonts/Roboto-Light.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoMedium";
+  src: url(../fonts/Roboto-Medium.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoBold";
+  src: url(../fonts/Roboto-Bold.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url(../fonts/Bebas-Neue.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ViaodaLibreRegular";
+  src: url(../fonts/ViaodaLibre-Regular.ttf) format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: "RobotoMedium";
+  font-size: 62.5%;
+  line-height: 1.25;
+  font-weight: normal;
+}
+
+body {
+  background-color: #dccbb6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "GeometriaBold";
+  font-weight: normal;
+}
+
+p,
+button {
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  @media (max-width: $mobile) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+a {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  @media (max-width: $mobile) {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+}
