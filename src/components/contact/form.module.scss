@@ -1,0 +1,98 @@
+@import "../../style/abstracts/variables.scss";
+
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(96, 49, 23, 0.8);
+  color: white;
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 20px;
+  margin-bottom: 150px;
+  @media (max-width: $tablet) {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+  .left {
+    position: relative;
+    padding: 30px;
+    @media (max-width: $mobile) {
+      padding: 20px;
+      padding-bottom: 30px;
+    }
+    h3 {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin-bottom: 20px;
+    }
+  }
+  .right {
+    position: relative;
+    background-color: rgba($color: white, $alpha: 0.05);
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+    @media (max-width: $mobile) {
+      border-radius: 0px 0px 20px 20px;
+    }
+    form {
+      position: relative;
+      .title {
+        font-family: "RobotoMedium";
+        margin-bottom: 20px;
+        text-align: left;
+        @media (max-width: $mobile) {
+          text-align: center;
+        }
+      }
+      .inputForm {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        text-align: left;
+        input {
+          border-bottom: 1px solid white;
+          padding: 5px 0px;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          color: white;
+          &::placeholder {
+            font-family: "RobotoLight";
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: inherit;
+          }
+        }
+        span {
+          margin-top: 5px;
+          font-size: 1.4rem;
+          line-height: 1.4rem;
+          color: rgb(255, 133, 133);
+        }
+      }
+      .formSubmit {
+        position: relative;
+        margin-top: 30px;
+        button {
+          background-color: rgba($color: white, $alpha: 0.15);
+          padding: 10px 30px;
+          border-radius: 25px;
+          transition: background-color 0.3s;
+          &:hover {
+            background-color: rgba($color: white, $alpha: 0.25);
+          }
+        }
+      }
+    }
+  }
+}

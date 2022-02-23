@@ -1,21 +1,51 @@
+@import "../style/abstracts/variables.scss";
+
 .container {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 15vw;
+  width: 100%;
   color: white;
+  @media (max-width: $tablet) {
+    padding-top: 0;
+    min-height: 55vh;
+    justify-content: center;
+  }
   .background {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: -1;
+    .landscape {
+      @media screen and (orientation: portrait) {
+        display: none;
+      }
+      @media screen and (orientation: landscape) {
+        display: block;
+      }
+    }
+    .portrait {
+      @media screen and (orientation: portrait) {
+        display: block;
+      }
+      @media screen and (orientation: landscape) {
+        display: none;
+      }
+    }
   }
   .logo {
     position: relative;
     width: 800px;
     max-width: 60%;
+    @media (max-width: $tablet) {
+      max-width: none;
+      width: 100%;
+      max-width: 550px;
+      padding: 10px 20px;
+    }
   }
   .title {
     position: relative;
@@ -26,6 +56,10 @@
       line-height: 2.25rem;
       text-transform: uppercase;
       text-align: center;
+      @media (max-width: $tablet) {
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+      }
     }
   }
 }

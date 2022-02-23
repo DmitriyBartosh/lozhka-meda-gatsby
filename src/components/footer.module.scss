@@ -9,14 +9,29 @@
   width: 100%;
   color: white;
   background-color: $khaki;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+  }
   .left {
     text-align: left;
+    @media (max-width: $tablet) {
+      text-align: center;
+      margin-bottom: 20px;
+    }
   }
   .center {
     text-align: center;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+    }
   }
   .right {
     text-align: right;
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
     .heycoddes {
       position: relative;
       a {

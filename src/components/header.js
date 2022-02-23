@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useWindowScroll } from "react-use";
-import { IoLogoInstagram, IoLogoVk } from "react-icons/io5";
-import { IoReorderThree } from "react-icons/io5";
+import { IoLogoInstagram, IoLogoVk, IoReorderThree } from "react-icons/io5";
 import {
   container,
   link,
-  hideLink,
   burger,
   mobile,
   desktop,

@@ -12,3 +12,10 @@
   font-size: 1.25rem;
   line-height: 1.25rem;
 }
+
+.main {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}

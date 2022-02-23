@@ -9,7 +9,8 @@ import {
   preview,
   video,
   photo,
-  info,
+  infoservice,
+  infocertificate,
   scrolldown,
   left,
   right,
@@ -58,7 +59,12 @@ function Presentation() {
             className={backimgtwo}
           />
         </div>
-        <div className={info}>
+        <div className={infoservice}>
+          <StaticImage
+            src="../../images/about/back2.png"
+            alt="массаж png"
+            className={backimgtwo}
+          />
           <div className={left}>
             <div className={photo}>
               <StaticImage
@@ -84,7 +90,7 @@ function Presentation() {
             <button className={btn}>Выбрать услугу</button>
           </div>
         </div>
-        <div className={info}>
+        <div className={infocertificate}>
           <div className={left}>
             <p>
               Есть возможность воспользоваться нашими программами одновременно
