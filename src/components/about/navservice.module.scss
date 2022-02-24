@@ -5,13 +5,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
-  width: 800px;
-  height: 275px;
+  width: 1000px;
+  height: 300px;
   color: white;
   background-color: rgba($color: white, $alpha: 0.25);
   padding: 20px;
   border-radius: 20px;
   margin: 0px auto;
+  @media (max-width: $medium) {
+    width: 800px;
+    height: 275px;
+  }
   @media (max-width: $tablet) {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 150px);
