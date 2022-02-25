@@ -26,25 +26,51 @@ module.exports = {
         theme_color: `#dccbb6`,
         display: `standalone`,
         lang: `ru`,
-        icon: `src/images/logo.png`,
+        icon: `src/images/logo.jpg`,
       },
     },
     "gatsby-plugin-sitemap",
-    {
-      resolve: "gatsby-plugin-manifest",
-      options: {
-        icon: "src/images/icon.png",
-      },
-    },
     `gatsby-plugin-image`,
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: "massage",
+        path: "./src/images/massage/",
       },
-      __key: "images",
+      __key: "massage",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "relaxspaboth",
+        path: "./src/images/relaxspa/both/",
+      },
+      __key: "relaxspaboth",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "relaxspaman",
+        path: "./src/images/relaxspa/man/",
+      },
+      __key: "relaxspaman",
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "relaxspawoman",
+        path: "./src/images/relaxspa/woman/",
+      },
+      __key: "relaxspawoman",
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: `${__dirname}/src/data/`,
+      },
+      __key: "data",
     },
   ],
 };
