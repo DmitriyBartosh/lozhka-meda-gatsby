@@ -27,7 +27,7 @@ function Header() {
   }, [y]);
 
   return (
-    <div className={header}>
+    <nav className={header}>
       <div className={mobile}>
         <Link
           to="/"
@@ -75,7 +75,7 @@ function Header() {
           <IoLogoVk />
         </a>
       </div>
-    </div>
+    </nav>
   );
 }
 
