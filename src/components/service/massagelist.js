@@ -12,12 +12,11 @@ import {
   index,
   title,
   description,
-  info,
   price_info,
   cost,
-  price,
   time,
 } from "./massagelist.module.scss";
+import Certificate from "./certificate";
 import Detail from "./detail";
 
 import massage_data from "../../data/massage.json";
@@ -66,6 +65,7 @@ function Massagelist() {
         />
         <p>Массаж</p>
       </div>
+      <Certificate />
       <div className={servicelist}>
         {massage_data.map((data, i) => {
           return (
@@ -91,17 +91,15 @@ function Massagelist() {
                   <div className={description}>
                     <p>{data.short_description}</p>
                   </div>
-                  <div className={info}>
-                    <div className={cost}>
-                      <div className={price_item}>
-                        <div className={number}>{data.short_cost.quantity}</div>
-                        <div className={price_info}>
-                          <p className={price}>{data.short_cost.price}</p>
-                          <p className={time}>
-                            <span>ВРЕМЯ: </span>
-                            {data.short_cost.time}
-                          </p>
-                        </div>
+                  <div className={cost}>
+                    <div className={price_item}>
+                      <div className={number}>{data.short_cost.quantity}</div>
+                      <div className={price_info}>
+                        <p>{data.short_cost.price}</p>
+                        <p className={time}>
+                          <span>ВРЕМЯ: </span>
+                          {data.short_cost.time}
+                        </p>
                       </div>
                     </div>
                   </div>

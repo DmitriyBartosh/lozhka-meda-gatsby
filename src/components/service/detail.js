@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { IoClose } from "react-icons/io5";
 import { useWindowSize } from "react-use";
+import Form from "../form";
 import {
   detail,
   left,
@@ -19,12 +20,37 @@ import {
 import "swiper/css";
 
 function Detail({ data, imageSrc, close }) {
+  const detailRef = useRef();
+  const [closeForm, setCloseForm] = useState(false);
+  const [orderDetail, setOrderDetail] = useState("");
   const { width } = useWindowSize();
   const imgSrc = getImage(imageSrc);
 
+  // Выбор палочки для эскимо
+  const handleForm = (price, time, quantity) => {
+    setOrderDetail(`${quantity}/ ${price} руб. / ${time}`);
+    setCloseForm(true);
+    detailRef.current.scrollTop = 0;
+  };
+
   return (
-    <div className={detail}>
+    <div
+      className={detail}
+      ref={detailRef}
+      style={{
+        height: closeForm ? 550 : "auto",
+        overflow: closeForm ? "hidden" : "initial",
+      }}
+    >
+      {closeForm && (
+        <Form
+          serviceselect={data.title}
+          orderDetail={orderDetail}
+          closeForm={() => setCloseForm(false)}
+        />
+      )}
       <button className={closeBtn} onClick={close}>
+        <span>закрыть</span>
         <IoClose />
       </button>
       <div className={block}>
@@ -41,23 +67,25 @@ function Detail({ data, imageSrc, close }) {
         <div className={right}>
           <h2>{data.title}</h2>
           <Swiper
-            slidesPerView={width > 600 ? 2.5 : 1.75}
+            slidesPerView={width > 600 ? 2.2 : 1.6}
             spaceBetween={10}
             grabCursor={true}
             className={price}
           >
-            {data.cost.map((item) => {
+            {data.cost.map((item, i) => {
               const { price, time, quantity } = item;
 
               return (
-                <SwiperSlide key={`detail_${data.title}`} className={order}>
+                <SwiperSlide key={`detail_${i}`} className={order}>
                   <div className={orderInfo}>
                     <p>
                       {quantity} / {price} руб.
                     </p>
                     <p>{time}</p>
                   </div>
-                  <button>Забронировать</button>
+                  <button onClick={() => handleForm(price, time, quantity)}>
+                    Забронировать
+                  </button>
                 </SwiperSlide>
               );
             })}

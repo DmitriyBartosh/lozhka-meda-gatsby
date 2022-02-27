@@ -12,10 +12,8 @@ import {
   index,
   title,
   description,
-  info,
   price_info,
   cost,
-  price,
   time,
 } from "./massagelist.module.scss";
 import Detail from "./detail";
@@ -66,7 +64,7 @@ function Sparelaxboth() {
           layout="fullWidth"
           className={img}
         />
-        <p>Массаж</p>
+        <p>Relax & SPA</p>
       </div>
       <Certificate />
       <Navsparelax />
@@ -95,17 +93,15 @@ function Sparelaxboth() {
                   <div className={description}>
                     <p>{data.short_description}</p>
                   </div>
-                  <div className={info}>
-                    <div className={cost}>
-                      <div className={price_item}>
-                        <div className={number}>{data.short_cost.quantity}</div>
-                        <div className={price_info}>
-                          <p className={price}>{data.short_cost.price}</p>
-                          <p className={time}>
-                            <span>ВРЕМЯ: </span>
-                            {data.short_cost.time}
-                          </p>
-                        </div>
+                  <div className={cost}>
+                    <div className={price_item}>
+                      <div className={number}>{data.short_cost.quantity}</div>
+                      <div className={price_info}>
+                        <p>{data.short_cost.price}</p>
+                        <p className={time}>
+                          <span>ВРЕМЯ: </span>
+                          {data.short_cost.time}
+                        </p>
                       </div>
                     </div>
                   </div>

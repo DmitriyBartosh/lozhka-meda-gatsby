@@ -19,3 +19,20 @@
   align-items: center;
   flex-direction: column;
 }
+
+.soon {
+  padding: 20px;
+  color: white;
+  background-color: $brown;
+  border-radius: 30px;
+  width: 800px;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+
+  margin: 0 auto;
+  margin-bottom: 30vh;
+  @media (max-width: $tablet) {
+    width: 90%;
+  }
+}

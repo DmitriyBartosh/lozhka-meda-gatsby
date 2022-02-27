@@ -2,17 +2,18 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "gatsby";
 import axios from "axios";
+import { MdOutlineClose } from "react-icons/md";
 import {
-  container,
-  left,
-  right,
   inputForm,
   formSubmit,
-  title,
+  form,
+  formContainer,
+  closeBtn,
+  formInput,
   politics,
 } from "./form.module.scss";
 
-function Form() {
+function Form({ serviceselect, closeForm, orderDetail }) {
   const {
     register,
     handleSubmit,
@@ -25,7 +26,11 @@ function Form() {
     axios
       .post(url, {
         telegram_message:
-          "Заявка / Вопрос с сайта" +
+          "Заявка с сайта" +
+          "%0A" +
+          `${serviceselect}` +
+          "%0A" +
+          `${orderDetail}` +
           "%0A" +
           `${data.name}` +
           "%0A" +
@@ -34,37 +39,20 @@ function Form() {
           `${data.message}`,
       })
       .then(function () {
+        closeForm();
         alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
       });
 
   return (
-    <div className={container}>
-      <div className={left}>
-        <h3>Мы находимся</h3>
-        <p>
-          Красноярск,
-          <br />
-          Парижской Коммуны, 39а
-          <br />
-          оф 304 (3 этаж)
-          <br />
-          остановка: Парижской Коммуны
-          <br />
-          <br />
-          телефон:
-          <br />
-          +7(967) 612-73-39
-          <br />
-          +7(391) 271-22-01
-        </p>
-      </div>
-      <div className={right}>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <p className={title}>
-            Если у вас остались вопросы, вы можете задать их здесь и мы
-            обязательно с вами свяжемся в ближайшее время
-          </p>
+    <div className={form}>
+      <button className={closeBtn} onClick={closeForm}>
+        <MdOutlineClose />
+      </button>
 
+      <h3>{serviceselect}</h3>
+      <p>{orderDetail}</p>
+      <form className={formContainer} onSubmit={handleSubmit(onSubmit)}>
+        <div className={formInput}>
           <div className={inputForm}>
             <p>1. Имя</p>
             <input
@@ -84,7 +72,6 @@ function Form() {
             />
             {errors.name && <span>{errors.name.message}</span>}
           </div>
-
           <div className={inputForm}>
             <p>2. Телефон или соц. сети</p>
             <input
@@ -102,27 +89,26 @@ function Form() {
             />
             {errors.phone && <span>{errors.phone.message}</span>}
           </div>
-
           <div className={inputForm}>
-            <p>3. Вопрос</p>
+            <p>3. Комментарий</p>
             <input
               {...register("message", {
-                required: "Задайте интересующий Вас вопрос",
+                required: "Комментарий к заказу",
               })}
-              placeholder="Расскажите или задайте вопрос"
+              placeholder="Оставьте комментарий к заказу"
               autoComplete="off"
             />
             {errors.message && <span>{errors.message.message}</span>}
           </div>
-          <p className={politics}>
-            Оставляя заявку Вы соглашаетесь
-            <br />с <Link to="/policy/">политикой конфиденциальности</Link>
-          </p>
-          <div className={formSubmit}>
-            <button type="submit">Отправить</button>
-          </div>
-        </form>
-      </div>
+        </div>
+        <p className={politics}>
+          Оставляя заявку Вы соглашаетесь
+          <br />с <Link to="/policy/">политикой конфиденциальности</Link>
+        </p>
+        <div className={formSubmit}>
+          <button type="submit">Забронировать</button>
+        </div>
+      </form>
     </div>
   );
 }

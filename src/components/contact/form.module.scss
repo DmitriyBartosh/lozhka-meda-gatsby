@@ -68,25 +68,38 @@
           color: white;
           &::placeholder {
             font-family: "RobotoLight";
-            font-size: 1.4rem;
-            line-height: 1.4rem;
+            font-size: 1.2rem;
+            line-height: 1.2rem;
             color: inherit;
           }
         }
         span {
           margin-top: 5px;
-          font-size: 1.4rem;
-          line-height: 1.4rem;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
           color: rgb(255, 133, 133);
+        }
+      }
+      .politics {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+        a {
+          font-size: 1.2rem;
+          line-height: 1.4rem;
+          font-weight: 600;
         }
       }
       .formSubmit {
         position: relative;
-        margin-top: 30px;
+        width: 100%;
         button {
           background-color: rgba($color: white, $alpha: 0.15);
-          padding: 10px 30px;
+          padding: 15px 30px;
           border-radius: 25px;
+          width: 100%;
           transition: background-color 0.3s;
           &:hover {
             background-color: rgba($color: white, $alpha: 0.25);

@@ -8,6 +8,7 @@
   color: white;
   background-color: rgba($color: $brown, $alpha: 0.8);
   border-radius: 30px;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
   overflow: hidden;
   margin: 0px auto;
   margin-bottom: 100px;
@@ -37,6 +38,7 @@
     }
     p {
       z-index: 5;
+      font-size: 2rem;
     }
   }
   .servicelist {

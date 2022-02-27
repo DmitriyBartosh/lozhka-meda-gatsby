@@ -1,0 +1,115 @@
+@import "../style/abstracts/variables.scss";
+
+.form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border-radius: 15px;
+  background-color: $brown;
+  color: white;
+  z-index: 1000;
+  .closeBtn {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: rgba($color: white, $alpha: 0.15);
+    transition: background-color 0.3s;
+    &:hover {
+      background-color: rgba($color: white, $alpha: 0.25);
+    }
+  }
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+    max-width: 250px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  & > p {
+    padding-bottom: 10px;
+    text-align: center;
+  }
+  .formContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0px;
+    padding: 20px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 400px;
+    .formInput {
+      position: relative;
+      width: 100%;
+      .inputForm {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 25px;
+        text-align: left;
+        input {
+          border-bottom: 1px solid white;
+          padding: 5px 0px;
+          font-size: 1.6rem;
+          line-height: 1.6rem;
+          color: white;
+          &::placeholder {
+            font-family: "RobotoLight";
+            font-size: 1.2rem;
+            line-height: 1.2rem;
+            opacity: 0.9;
+            color: inherit;
+          }
+        }
+        span {
+          font-family: "RobotoLight";
+          margin-top: 5px;
+          font-size: 1.2rem;
+          line-height: 1.2rem;
+          color: rgb(255, 133, 133);
+        }
+      }
+    }
+    .politics {
+      margin-top: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 1.2rem;
+      line-height: 1.2rem;
+      a {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+        font-weight: 600;
+      }
+    }
+    .formSubmit {
+      position: relative;
+      button {
+        background-color: rgba($color: white, $alpha: 0.15);
+        padding: 15px 30px;
+        border-radius: 25px;
+        min-width: 200px;
+        transition: background-color 0.3s;
+        &:hover {
+          background-color: rgba($color: white, $alpha: 0.25);
+        }
+      }
+    }
+  }
+}

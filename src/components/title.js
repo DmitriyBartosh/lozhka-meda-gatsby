@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from "gatsby";
 import {
   container,
   background,
@@ -28,16 +29,16 @@ function Title() {
           className={portrait}
         />
       </div>
-      <div className={logo}>
+      <Link className={logo} to="/">
         <StaticImage
           src="../images/logo.png"
           placeholder="none"
           alt="логотип Ложка меда студия массажа"
         />
-      </div>
+      </Link>
       <div className={title}>
         <h1>
-          Все виды массажей | SPA лдя двоих
+          Все виды массажей | SPA для двоих
           <br />
           массаж лица | сертификаты
         </h1>

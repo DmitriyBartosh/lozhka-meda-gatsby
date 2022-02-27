@@ -1,7 +1,13 @@
 module.exports = {
   siteMetadata: {
-    title: `lozhka-meda-gatsby`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteTitle: "Студия массажа | Ложка меда",
+    siteUrl: "https://lmmassage.ru/",
+    siteDescription:
+      "Студия основана в 2010 году, основой нашей деятельности является: массаж, фитобочка, релакс программы (спа), оздоровительные сеансы соляной комнаты.",
+    siteKeyWords:
+      "массаж, фитобочка, релакс программы (спа), оздоровительные сеансы, соляной комнаты",
+    siteImage: "imagepreview.png",
+    siteTwitter: "@lozhka_meda",
   },
   plugins: [
     "gatsby-plugin-sass",

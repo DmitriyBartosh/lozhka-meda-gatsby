@@ -87,7 +87,9 @@ function Presentation() {
               Вкусный травяной чай с традиционной ложкой меда Квалифицированные
               специалисты
             </p>
-            <button className={btn}>Выбрать услугу</button>
+            <Link to="/relaxspa" className={btn}>
+              Выбрать услугу
+            </Link>
           </div>
         </div>
         <div className={infocertificate}>
