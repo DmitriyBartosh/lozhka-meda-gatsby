@@ -20,9 +20,11 @@ import {
 } from "./massagelist.module.scss";
 import Detail from "./detail";
 
-import massage_data from "../../data/massage.json";
+import massage_data from "../../data/relaxspa.json";
+import Certificate from "./certificate";
+import Navsparelax from "./navsparelax";
 
-function Massagelist() {
+function Sparelaxboth() {
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -36,7 +38,7 @@ function Massagelist() {
   const image_url = useStaticQuery(graphql`
     {
       allFile(
-        filter: { sourceInstanceName: { eq: "massage" } }
+        filter: { sourceInstanceName: { eq: "relaxspaboth" } }
         sort: { fields: name, order: ASC }
       ) {
         edges {
@@ -59,15 +61,17 @@ function Massagelist() {
     <div className={container}>
       <div className={preview}>
         <StaticImage
-          src="../../images/massage.png"
+          src="../../images/spa.jpeg"
           alt="Услуги массажа"
           layout="fullWidth"
           className={img}
         />
         <p>Массаж</p>
       </div>
+      <Certificate />
+      <Navsparelax />
       <div className={servicelist}>
-        {massage_data.map((data, i) => {
+        {massage_data.both.map((data, i) => {
           return (
             <div key={`massage_detail${i}`}>
               {selected === i ? (
@@ -115,4 +119,4 @@ function Massagelist() {
   );
 }
 
-export default Massagelist;
+export default Sparelaxboth;

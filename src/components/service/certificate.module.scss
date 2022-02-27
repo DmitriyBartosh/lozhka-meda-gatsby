@@ -1,0 +1,36 @@
+@import "../../style/abstracts/variables.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  width: 80%;
+  margin: 20px auto;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    margin: 0px auto;
+  }
+  p {
+    padding-right: 40px;
+    @media (max-width: $tablet) {
+      margin-bottom: 20px;
+      padding: 0px;
+      text-align: center;
+    }
+  }
+  .btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    width: 450px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      width: 250px;
+    }
+  }
+}

@@ -11,7 +11,12 @@ function Navigation() {
       <Link to="/massage" className={link} activeClassName={active}>
         Массаж
       </Link>
-      <Link to="/relaxspa" className={link} activeClassName={active}>
+      <Link
+        to="/relaxspa"
+        className={link}
+        activeClassName={active}
+        partiallyActive={true}
+      >
         Relax & SPA
       </Link>
       <Link to="/certificate" className={link} activeClassName={active}>

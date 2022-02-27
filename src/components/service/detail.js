@@ -1,5 +1,8 @@
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { IoClose } from "react-icons/io5";
+import { useWindowSize } from "react-use";
 import {
   detail,
   left,
@@ -13,15 +16,20 @@ import {
   included,
   programm,
 } from "./detail.module.scss";
+import "swiper/css";
 
-function Detail({ data, imageSrc }) {
+function Detail({ data, imageSrc, close }) {
+  const { width } = useWindowSize();
   const imgSrc = getImage(imageSrc);
 
   return (
     <div className={detail}>
-      <div className={closeBtn}></div>
+      <button className={closeBtn} onClick={close}>
+        <IoClose />
+      </button>
       <div className={block}>
         <div className={left}>
+          <h2>{data.title}</h2>
           <GatsbyImage
             image={imgSrc}
             alt={data.title}
@@ -32,12 +40,17 @@ function Detail({ data, imageSrc }) {
         </div>
         <div className={right}>
           <h2>{data.title}</h2>
-          <div className={price}>
+          <Swiper
+            slidesPerView={width > 600 ? 2.5 : 1.75}
+            spaceBetween={10}
+            grabCursor={true}
+            className={price}
+          >
             {data.cost.map((item) => {
               const { price, time, quantity } = item;
 
               return (
-                <div className={order} key={`detail_${data.title}`}>
+                <SwiperSlide key={`detail_${data.title}`} className={order}>
                   <div className={orderInfo}>
                     <p>
                       {quantity} / {price} руб.
@@ -45,20 +58,22 @@ function Detail({ data, imageSrc }) {
                     <p>{time}</p>
                   </div>
                   <button>Забронировать</button>
-                </div>
+                </SwiperSlide>
               );
             })}
-          </div>
+          </Swiper>
           <div
             className={included}
-            dangerouslySetInnerHTML={{ __html: data.included }}
+            dangerouslySetInnerHTML={{ __html: data.programm }}
           />
         </div>
       </div>
-      <div
-        className={programm}
-        dangerouslySetInnerHTML={{ __html: data.aboutprogramm }}
-      />
+      {data.description && (
+        <div
+          className={programm}
+          dangerouslySetInnerHTML={{ __html: data.description }}
+        />
+      )}
     </div>
   );
 }

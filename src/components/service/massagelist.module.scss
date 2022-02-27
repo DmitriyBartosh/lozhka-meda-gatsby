@@ -7,12 +7,18 @@
   width: 1200px;
   color: white;
   background-color: rgba($color: $brown, $alpha: 0.8);
-  border-radius: 20px;
+  border-radius: 30px;
   overflow: hidden;
   margin: 0px auto;
   margin-bottom: 100px;
   @media (max-width: $medium) {
     width: 1000px;
+  }
+  @media (max-width: $tablet) {
+    width: 90vw;
+    width: calc(100vw - 20px);
+    margin: 0px auto;
+    margin-bottom: 50px;
   }
   .preview {
     position: relative;
@@ -21,6 +27,9 @@
     justify-content: center;
     height: 200px;
     width: 100%;
+    @media (max-width: $tablet) {
+      height: 175px;
+    }
     .img {
       position: absolute;
       width: 100%;
@@ -35,17 +44,30 @@
     display: flex;
     flex-direction: column;
     padding: 30px;
+    @media (max-width: $tablet) {
+      padding: 10px;
+    }
+    div:last-child .item {
+      border-bottom: none;
+    }
     .item {
       position: relative;
       display: grid;
-      grid-template-columns: 50px 1fr 2fr 150px;
+      grid-template-columns: 50px 1fr 2fr 175px;
       width: 100%;
       border-bottom: 1px solid white;
       padding-top: 20px;
       padding-bottom: 10px;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
       transition: background-color 0.3s;
       cursor: pointer;
+      @media (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+        margin-bottom: 10px;
+      }
       &:hover {
         background-color: rgba($color: white, $alpha: 0.15);
       }
@@ -57,11 +79,19 @@
         display: flex;
         align-items: flex-start;
         justify-content: center;
+        @media (max-width: $mobile) {
+          justify-content: flex-start;
+          margin-left: 10px;
+          margin-bottom: 10px;
+        }
       }
       .title {
         position: relative;
         display: flex;
         align-items: center;
+        @media (max-width: $mobile) {
+          padding-left: 20px;
+        }
         h2 {
           font-family: "BebasNeue";
           font-size: 3rem;
@@ -73,17 +103,30 @@
         display: flex;
         align-items: center;
         padding: 0px 30px;
+        @media (max-width: $mobile) {
+          padding-left: 20px;
+        }
       }
       .cost {
         position: relative;
         display: flex;
         flex-direction: column;
+        @media (max-width: $mobile) {
+          padding-left: 20px;
+          margin-top: 10px;
+        }
         .price_item {
           position: relative;
           display: flex;
-          align-items: flex-start;
           flex-direction: column;
-          margin-bottom: 8px;
+          @media (max-width: $mobile) {
+            flex-direction: row;
+            align-items: center;
+            border: 1px solid $yellow;
+            padding: 3px;
+            border-radius: 25px;
+            padding-right: 15px;
+          }
           .number {
             position: relative;
             display: flex;
@@ -96,6 +139,30 @@
             border-radius: 50%;
             border: 1px solid white;
             margin-bottom: 5px;
+            @media (max-width: $mobile) {
+              margin-right: 10px;
+              height: 40px;
+              width: 40px;
+              border: 1px solid $yellow;
+              margin-bottom: 0px;
+            }
+          }
+          .price_info {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            margin-bottom: 8px;
+            @media (max-width: $mobile) {
+              margin-bottom: 0px;
+            }
+            .time {
+              span {
+                @media (max-width: $mobile) {
+                  display: none;
+                }
+              }
+            }
           }
         }
       }

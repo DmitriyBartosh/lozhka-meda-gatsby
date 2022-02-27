@@ -1,0 +1,31 @@
+@import "../../style/abstracts/variables.scss";
+
+.sparelax {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  @media (max-width: $mobile) {
+    padding: 10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .link {
+    position: relative;
+    padding: 12px 30px;
+    margin: 0 10px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    text-align: center;
+    text-transform: lowercase;
+    @media (max-width: $mobile) {
+      padding: 12px 10px;
+      margin: 0px;
+    }
+  }
+  .active {
+    border: 1px solid white;
+  }
+}

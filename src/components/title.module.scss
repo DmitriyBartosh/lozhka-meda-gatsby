@@ -20,19 +20,15 @@
     right: 0;
     z-index: -1;
     .landscape {
-      @media screen and (orientation: portrait) {
+      display: block;
+      @media (max-width: $tablet) {
         display: none;
-      }
-      @media screen and (orientation: landscape) {
-        display: block;
       }
     }
     .portrait {
-      @media screen and (orientation: portrait) {
+      display: none;
+      @media (max-width: $tablet) {
         display: block;
-      }
-      @media screen and (orientation: landscape) {
-        display: none;
       }
     }
   }
