@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { useWindowScroll } from "react-use";
 import { IoLogoInstagram, IoLogoVk, IoReorderThree } from "react-icons/io5";
 import {
-  container,
+  header,
   link,
   burger,
   mobile,
@@ -27,7 +27,7 @@ function Header() {
   }, [y]);
 
   return (
-    <div className={container}>
+    <div className={header}>
       <div className={mobile}>
         <Link
           to="/"
