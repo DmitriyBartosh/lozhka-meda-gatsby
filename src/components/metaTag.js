@@ -2,11 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import { Helmet } from "react-helmet";
-import { useLocation } from "@reach/router";
 import { useStaticQuery, graphql } from "gatsby";
 
 const MetaTag = ({ title }) => {
-  const { pathname } = useLocation();
   const { site } = useStaticQuery(query);
   const { siteDescription, siteKeyWords, siteImage, siteTwitter, siteUrl } =
     site?.siteMetadata;
@@ -15,7 +13,7 @@ const MetaTag = ({ title }) => {
     title: title,
     description: siteDescription,
     image: `${siteUrl}${siteImage}`,
-    url: `${siteUrl}${pathname}`,
+    url: `${siteUrl}`,
   };
 
   return (
@@ -42,9 +40,11 @@ export default MetaTag;
 MetaTag.propTypes = {
   title: PropTypes.string,
 };
+
 MetaTag.defaultProps = {
   title: "Студия массажа | Ложка меда",
 };
+
 const query = graphql`
   query SEO {
     site {

@@ -1,12 +1,8 @@
 import React from "react";
-import { soon } from "../style/other.module.scss";
+import CertificateList from "../components/certificate/certificateList";
 
 function Certificate() {
-  return (
-    <div className={soon}>
-      В ближайшее время тут появятся подарочные сертификаты
-    </div>
-  );
+  return <CertificateList />;
 }
 
 export default Certificate;

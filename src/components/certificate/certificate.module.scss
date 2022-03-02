@@ -1,0 +1,690 @@
+@import "../../style/abstracts/variables.scss";
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media (max-width: $tablet) {
+    width: 100%;
+    padding: 20px;
+  }
+  .title {
+    position: relative;
+    min-height: 30vh;
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding: 20px;
+      min-height: 30vh;
+      top: -10vh;
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+    p {
+      text-align: center;
+      color: white;
+      max-width: 800px;
+      margin-bottom: 50px;
+      @media (max-width: $tablet) {
+        max-width: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+  .nominal {
+    position: relative;
+    max-width: 800px;
+    @media (max-width: $mobile) {
+      margin-top: 75px;
+    }
+    .image {
+      position: relative;
+      margin: 40px auto;
+      border-radius: 50px;
+      -webkit-mask-image: -webkit-radial-gradient(white, black);
+      @media (max-width: $tablet) {
+        border-radius: 25px;
+      }
+      @media (max-width: $mobile) {
+        border-radius: 20px;
+      }
+    }
+    h2 {
+      font-size: 3rem;
+      line-height: 3rem;
+      text-transform: uppercase;
+      color: $brown;
+      margin-bottom: 20px;
+      text-align: center;
+      @media (max-width: $mobile) {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+    p {
+      color: $brown;
+      text-align: center;
+    }
+    .inputrange {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      input {
+        width: 100%;
+        height: 3px;
+        background-color: $brown;
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 20px;
+          width: 20px;
+          border-radius: 50%;
+          background-color: $brown;
+          border: 2px solid white;
+          cursor: pointer;
+          transition: transform 0.3s;
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+      }
+      .info {
+        position: relative;
+        display: flex;
+        margin-top: 20px;
+        @media (max-width: $tablet) {
+          flex-direction: column;
+          align-items: center;
+        }
+        .desc {
+          font-family: "RobotoLight";
+          text-align: left;
+          padding-right: 50px;
+          @media (max-width: $tablet) {
+            padding-right: 0px;
+            text-align: center;
+          }
+        }
+        .value {
+          font-size: 2.5rem;
+          line-height: 2.5rem;
+          text-align: right;
+          min-width: 300px;
+          @media (max-width: $tablet) {
+            text-align: center;
+            margin-top: 20px;
+          }
+        }
+      }
+      .order {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: $tablet) {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .massage {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 75px auto;
+    @media (max-width: $tablet) {
+      margin: 50px auto;
+      align-items: center;
+      padding-top: 25px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .header {
+      position: relative;
+      width: 60%;
+      text-align: right;
+      @media (max-width: $tablet) {
+        text-align: center;
+        width: 100%;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+      p {
+        color: $brown;
+      }
+    }
+    .select {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      width: 100%;
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .left {
+        position: relative;
+        top: -15px;
+        margin: 20px 0px;
+        @media (max-width: $tablet) {
+          top: 0px;
+          margin-top: 0;
+        }
+        h2 {
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+          margin-bottom: 15px;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+        .selectcontainer {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          height: 325px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+          &::-webkit-scrollbar {
+            width: 0px;
+          }
+          @media (max-width: $tablet) {
+            overflow: visible;
+            height: auto;
+          }
+          h3 {
+            position: relative;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            color: $brown;
+            @media (max-width: $mobile) {
+              font-size: 1.75rem;
+              line-height: 1.75rem;
+            }
+          }
+          .servicecontainer {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            @media (max-width: $tablet) {
+              display: flex;
+              flex-wrap: wrap;
+            }
+            .btnservice {
+              position: relative;
+              padding: 12px 30px;
+              background-color: $khaki;
+              color: white;
+              text-align: center;
+              border-radius: 10px;
+              margin: 5px 0;
+              transition: background-color 0.5s;
+              @media (max-width: $mobile) {
+                padding: 12px 15px;
+              }
+              &:hover {
+                background-color: $title;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .image {
+          position: relative;
+          width: 100%;
+          height: 325px;
+          margin: 40px 0px;
+          border-radius: 30px;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+          @media (max-width: $tablet) {
+            border-radius: 25px;
+            height: auto;
+          }
+          @media (max-width: $mobile) {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .relaxspaboth {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 75px auto;
+    @media (max-width: $tablet) {
+      margin: 20px auto;
+      margin-top: 0px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .header {
+      position: relative;
+      width: 60%;
+      text-align: left;
+      @media (max-width: $tablet) {
+        text-align: center;
+        width: 100%;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+      p {
+        color: $brown;
+      }
+    }
+    .select {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      width: 100%;
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+      .right {
+        position: relative;
+        top: -15px;
+        margin: 20px 0px;
+        @media (max-width: $tablet) {
+          top: 0;
+          margin-top: 0;
+        }
+        h2 {
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+          margin-bottom: 15px;
+          text-align: right;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+        .selectcontainer {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          height: 325px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+          @media (max-width: $tablet) {
+            height: auto;
+            align-items: flex-start;
+            overflow: visible;
+          }
+          &::-webkit-scrollbar {
+            width: 0px;
+          }
+          h3 {
+            position: relative;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            color: $brown;
+            @media (max-width: $mobile) {
+              font-size: 1.75rem;
+              line-height: 1.75rem;
+            }
+          }
+          .servicecontainer {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+            @media (max-width: $tablet) {
+              justify-content: flex-start;
+            }
+            .btnservice {
+              position: relative;
+              padding: 12px 30px;
+              background-color: $khaki;
+              color: white;
+              text-align: center;
+              border-radius: 10px;
+              margin: 5px 0;
+              transition: background-color 0.5s;
+              @media (max-width: $mobile) {
+                padding: 12px 15px;
+              }
+              &:hover {
+                background-color: $title;
+              }
+            }
+          }
+        }
+      }
+      .left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .image {
+          position: relative;
+          width: 100%;
+          height: 325px;
+          margin: 40px 0px;
+          border-radius: 30px;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+          @media (max-width: $tablet) {
+            border-radius: 25px;
+            height: auto;
+          }
+          @media (max-width: $mobile) {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .relaxspaman {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 75px auto;
+    @media (max-width: $tablet) {
+      margin: 30px auto;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    .header {
+      position: relative;
+      width: 60%;
+      text-align: right;
+      @media (max-width: $tablet) {
+        text-align: center;
+        width: 100%;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+      p {
+        color: $brown;
+      }
+    }
+    .select {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      width: 100%;
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      .left {
+        position: relative;
+        top: -15px;
+        margin: 20px 0px;
+        @media (max-width: $tablet) {
+          top: 0px;
+          margin-top: 0px;
+        }
+        h2 {
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+          margin-bottom: 15px;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+        .selectcontainer {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          height: 325px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+          @media (max-width: $tablet) {
+            height: auto;
+            align-items: flex-start;
+            overflow: visible;
+          }
+          &::-webkit-scrollbar {
+            width: 0px;
+          }
+          h3 {
+            position: relative;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            color: $brown;
+            @media (max-width: $mobile) {
+              font-size: 1.75rem;
+              line-height: 1.75rem;
+            }
+          }
+          .servicecontainer {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            .btnservice {
+              position: relative;
+              padding: 12px 30px;
+              background-color: $khaki;
+              color: white;
+              text-align: center;
+              border-radius: 10px;
+              margin: 5px 0;
+              transition: background-color 0.5s;
+              @media (max-width: $mobile) {
+                padding: 12px 15px;
+              }
+              &:hover {
+                background-color: $title;
+              }
+            }
+          }
+        }
+      }
+      .right {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .image {
+          position: relative;
+          width: 100%;
+          height: 325px;
+          margin: 40px 0px;
+          border-radius: 30px;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+          @media (max-width: $tablet) {
+            border-radius: 25px;
+            height: auto;
+          }
+          @media (max-width: $mobile) {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .relaxspawoman {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 75px auto;
+    @media (max-width: $tablet) {
+      margin: 20px auto;
+    }
+    .header {
+      position: relative;
+      width: 60%;
+      text-align: left;
+      @media (max-width: $tablet) {
+        text-align: center;
+        width: 100%;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 20px;
+        @media (max-width: $mobile) {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+      }
+      p {
+        color: $brown;
+      }
+    }
+    .select {
+      position: relative;
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      width: 100%;
+      @media (max-width: $tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+      .right {
+        position: relative;
+        top: -15px;
+        margin: 20px 0px;
+        @media (max-width: $tablet) {
+          margin-top: 0px;
+          top: 0px;
+        }
+        h2 {
+          font-size: 2.25rem;
+          line-height: 2.25rem;
+          margin-bottom: 15px;
+          text-align: right;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
+        .selectcontainer {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          height: 325px;
+          overflow: auto;
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+          @media (max-width: $tablet) {
+            height: auto;
+            align-items: flex-start;
+            overflow: visible;
+          }
+          &::-webkit-scrollbar {
+            width: 0px;
+          }
+          h3 {
+            position: relative;
+            font-size: 2rem;
+            line-height: 2rem;
+            margin-bottom: 10px;
+            margin-top: 15px;
+            color: $brown;
+            @media (max-width: $mobile) {
+              font-size: 1.75rem;
+              line-height: 1.75rem;
+            }
+          }
+          .servicecontainer {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 10px;
+            @media (max-width: $tablet) {
+              justify-content: flex-start;
+            }
+            .btnservice {
+              position: relative;
+              padding: 12px 30px;
+              background-color: $khaki;
+              color: white;
+              text-align: center;
+              border-radius: 10px;
+              margin: 5px 0;
+              transition: background-color 0.5s;
+              @media (max-width: $mobile) {
+                padding: 12px 15px;
+              }
+              &:hover {
+                background-color: $title;
+              }
+            }
+          }
+        }
+      }
+      .left {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        .image {
+          position: relative;
+          width: 100%;
+          height: 325px;
+          margin: 40px 0px;
+          border-radius: 30px;
+          -webkit-mask-image: -webkit-radial-gradient(white, black);
+          @media (max-width: $tablet) {
+            border-radius: 25px;
+            height: auto;
+          }
+          @media (max-width: $mobile) {
+            border-radius: 20px;
+          }
+        }
+      }
+    }
+  }
+}
