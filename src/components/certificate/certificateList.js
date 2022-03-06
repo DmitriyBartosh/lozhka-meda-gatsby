@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import axios from "axios";
 import Form from "./form";
 import {
   container,
@@ -32,11 +33,26 @@ function CertificateList() {
   const [nominalValue, setNominalValue] = useState("500");
   const [isShow, setIsShow] = useState(false);
 
+  console.log(process.env.TEST);
+
   const [serviceChange, setServiceChange] = useState("");
 
-  const handleService = (service) => {
+  const url = "https://lmmassage.ru/api/pay.php";
+
+  const handleService = (service, price) => {
     setServiceChange(service);
     setIsShow(true);
+    console.log(service);
+    console.log(price);
+
+    axios
+      .post(url, {
+        service_name: service,
+        service_price: price,
+      })
+      .then(function () {
+        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+      });
   };
 
   return (
@@ -123,7 +139,8 @@ function CertificateList() {
                             className={btnservice}
                             onClick={() =>
                               handleService(
-                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`
+                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`,
+                                Number(item.price)
                               )
                             }
                           >
@@ -216,7 +233,7 @@ function CertificateList() {
           <h2>
             Сертификат на Relax & SPA
             <br />
-            для женщин
+            для мужчин
           </h2>
           <p>
             Сертификат действует один раз до полного использования. Срок
@@ -276,7 +293,7 @@ function CertificateList() {
           <h2>
             Сертификат на Relax & SPA
             <br />
-            для мужчин
+            для женщин
           </h2>
           <p>
             Сертификат действует один раз до полного использования. Срок
@@ -298,7 +315,7 @@ function CertificateList() {
           <div className={right}>
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
-              {massage_data.map((item, i) => {
+              {relaxspa_data.woman.map((item, i) => {
                 const { title, cost } = item;
 
                 return (

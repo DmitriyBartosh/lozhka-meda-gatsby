@@ -168,6 +168,7 @@
       position: relative;
       display: grid;
       grid-template-columns: 2fr 3fr;
+      column-gap: 20px;
       width: 100%;
       @media (max-width: $tablet) {
         display: flex;
@@ -197,6 +198,9 @@
           align-items: flex-start;
           height: 325px;
           overflow: auto;
+          background-color: rgba(255, 255, 255, 0.25);
+          padding: 10px 25px;
+          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           &::-webkit-scrollbar {
@@ -229,7 +233,7 @@
             }
             .btnservice {
               position: relative;
-              padding: 12px 30px;
+              padding: 12px 20px;
               background-color: $khaki;
               color: white;
               text-align: center;
@@ -308,6 +312,7 @@
       position: relative;
       display: grid;
       grid-template-columns: 3fr 2fr;
+      column-gap: 20px;
       width: 100%;
       @media (max-width: $tablet) {
         display: flex;
@@ -338,6 +343,9 @@
           align-items: flex-end;
           height: 325px;
           overflow: auto;
+          background-color: rgba(255, 255, 255, 0.25);
+          padding: 10px 25px;
+          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           @media (max-width: $tablet) {
@@ -449,6 +457,7 @@
       position: relative;
       display: grid;
       grid-template-columns: 2fr 3fr;
+      column-gap: 20px;
       width: 100%;
       @media (max-width: $tablet) {
         display: flex;
@@ -475,9 +484,12 @@
           position: relative;
           display: flex;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: flex-end;
           height: 325px;
           overflow: auto;
+          background-color: rgba(255, 255, 255, 0.25);
+          padding: 10px 25px;
+          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           @media (max-width: $tablet) {
@@ -584,6 +596,7 @@
       position: relative;
       display: grid;
       grid-template-columns: 3fr 2fr;
+      column-gap: 20px;
       width: 100%;
       @media (max-width: $tablet) {
         display: flex;
@@ -614,6 +627,9 @@
           align-items: flex-end;
           height: 325px;
           overflow: auto;
+          background-color: rgba(255, 255, 255, 0.25);
+          padding: 10px 25px;
+          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           @media (max-width: $tablet) {
