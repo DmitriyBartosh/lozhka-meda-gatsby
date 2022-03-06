@@ -191,6 +191,16 @@
             display: none;
           }
         }
+        .scrolldown {
+          position: absolute;
+          bottom: -40px;
+          width: 100%;
+          height: 22px;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
         .selectcontainer {
           position: relative;
           display: flex;
@@ -198,17 +208,16 @@
           align-items: flex-start;
           height: 325px;
           overflow: auto;
-          background-color: rgba(255, 255, 255, 0.25);
-          padding: 10px 25px;
-          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
+          border-bottom: 1px solid #603117;
           &::-webkit-scrollbar {
             width: 0px;
           }
           @media (max-width: $tablet) {
             overflow: visible;
             height: auto;
+            border: none;
           }
           h3 {
             position: relative;
@@ -322,9 +331,21 @@
         position: relative;
         top: -15px;
         margin: 20px 0px;
+        border-bottom: 1px solid #603117;
+        .scrolldown {
+          position: absolute;
+          bottom: -40px;
+          width: 100%;
+          height: 22px;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
         @media (max-width: $tablet) {
           top: 0;
           margin-top: 0;
+          border: none;
         }
         h2 {
           font-size: 2.25rem;
@@ -343,9 +364,6 @@
           align-items: flex-end;
           height: 325px;
           overflow: auto;
-          background-color: rgba(255, 255, 255, 0.25);
-          padding: 10px 25px;
-          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           @media (max-width: $tablet) {
@@ -484,12 +502,9 @@
           position: relative;
           display: flex;
           flex-direction: column;
-          align-items: flex-end;
+          align-items: flex-start;
           height: 325px;
           overflow: auto;
-          background-color: rgba(255, 255, 255, 0.25);
-          padding: 10px 25px;
-          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
           @media (max-width: $tablet) {
@@ -606,6 +621,16 @@
         position: relative;
         top: -15px;
         margin: 20px 0px;
+        .scrolldown {
+          position: absolute;
+          bottom: -40px;
+          width: 100%;
+          height: 22px;
+          color: $brown;
+          @media (max-width: $tablet) {
+            display: none;
+          }
+        }
         @media (max-width: $tablet) {
           margin-top: 0px;
           top: 0px;
@@ -627,15 +652,14 @@
           align-items: flex-end;
           height: 325px;
           overflow: auto;
-          background-color: rgba(255, 255, 255, 0.25);
-          padding: 10px 25px;
-          border-radius: 30px;
           -ms-overflow-style: none;
           overflow: -moz-scrollbars-none;
+          border-bottom: 1px solid #603117;
           @media (max-width: $tablet) {
             height: auto;
             align-items: flex-start;
             overflow: visible;
+            border: none;
           }
           &::-webkit-scrollbar {
             width: 0px;

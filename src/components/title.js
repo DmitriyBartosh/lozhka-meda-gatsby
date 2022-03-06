@@ -1,6 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
+import { IoLogoInstagram, IoLogoVk } from "react-icons/io5";
 import {
   container,
   background,
@@ -8,6 +9,8 @@ import {
   title,
   portrait,
   landscape,
+  mobile,
+  link,
 } from "./title.module.scss";
 
 function Title() {
@@ -42,6 +45,24 @@ function Title() {
           <br />
           массаж лица | сертификаты
         </h1>
+      </div>
+      <div className={mobile}>
+        <a
+          href="https://www.instagram.com/studio_massage_/"
+          target="_blank"
+          rel="noreferrer"
+          className={link}
+        >
+          <IoLogoInstagram />
+        </a>
+        <a
+          href="https://vk.com/fitochka24"
+          target="_blank"
+          rel="noreferrer"
+          className={link}
+        >
+          <IoLogoVk />
+        </a>
       </div>
     </div>
   );

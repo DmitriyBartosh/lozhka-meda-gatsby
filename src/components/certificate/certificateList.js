@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StaticImage } from "gatsby-plugin-image";
-import axios from "axios";
 import Form from "./form";
+import { IoArrowDown } from "react-icons/io5";
 import {
   container,
   title,
@@ -23,6 +23,7 @@ import {
   selectcontainer,
   btnservice,
   servicecontainer,
+  scrolldown,
 } from "./certificate.module.scss";
 import { btn } from "../../style/other.module.scss";
 
@@ -33,32 +34,23 @@ function CertificateList() {
   const [nominalValue, setNominalValue] = useState("500");
   const [isShow, setIsShow] = useState(false);
 
-  console.log(process.env.TEST);
-
   const [serviceChange, setServiceChange] = useState("");
-
-  const url = "https://lmmassage.ru/api/pay.php";
+  const [priceChange, setPriceChange] = useState(0);
 
   const handleService = (service, price) => {
     setServiceChange(service);
+    setPriceChange(price);
     setIsShow(true);
-    console.log(service);
-    console.log(price);
-
-    axios
-      .post(url, {
-        service_name: service,
-        service_price: price,
-      })
-      .then(function () {
-        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
-      });
   };
 
   return (
     <div className={container}>
       {isShow && (
-        <Form serviceInfo={serviceChange} closeForm={() => setIsShow(false)} />
+        <Form
+          serviceInfo={serviceChange}
+          price={priceChange}
+          closeForm={() => setIsShow(false)}
+        />
       )}
       <div className={title}>
         <p>
@@ -103,7 +95,10 @@ function CertificateList() {
             <button
               className={btn}
               onClick={() =>
-                handleService(`Сертификат номинальный на ${nominalValue} руб.`)
+                handleService(
+                  `Сертификат номинальный на ${nominalValue} руб.`,
+                  Number(nominalValue)
+                )
               }
             >
               Приобрести сертификат
@@ -124,6 +119,7 @@ function CertificateList() {
         </div>
         <div className={select}>
           <div className={left}>
+            <IoArrowDown className={scrolldown} />
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
               {massage_data.map((item, i) => {
@@ -139,7 +135,7 @@ function CertificateList() {
                             className={btnservice}
                             onClick={() =>
                               handleService(
-                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`,
+                                `${title} / ${item.time} / ${item.quantity}`,
                                 Number(item.price)
                               )
                             }
@@ -194,6 +190,7 @@ function CertificateList() {
           </div>
           <div className={right}>
             <h2>Выберите услугу</h2>
+            <IoArrowDown className={scrolldown} />
             <div className={selectcontainer}>
               {relaxspa_data.both.map((item, i) => {
                 const { title, cost } = item;
@@ -208,7 +205,8 @@ function CertificateList() {
                             className={btnservice}
                             onClick={() =>
                               handleService(
-                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`
+                                `${title} / ${item.time} / ${item.quantity}`,
+                                Number(item.price)
                               )
                             }
                           >
@@ -260,7 +258,8 @@ function CertificateList() {
                             className={btnservice}
                             onClick={() =>
                               handleService(
-                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`
+                                `${title} / ${item.time} / ${item.quantity}`,
+                                Number(item.price)
                               )
                             }
                           >
@@ -314,6 +313,7 @@ function CertificateList() {
           </div>
           <div className={right}>
             <h2>Выберите услугу</h2>
+            <IoArrowDown className={scrolldown} />
             <div className={selectcontainer}>
               {relaxspa_data.woman.map((item, i) => {
                 const { title, cost } = item;
@@ -328,7 +328,8 @@ function CertificateList() {
                             className={btnservice}
                             onClick={() =>
                               handleService(
-                                `${title} / ${item.price} руб. / ${item.time} / ${item.quantity}`
+                                `${title} / ${item.time} / ${item.quantity}`,
+                                Number(item.price)
                               )
                             }
                           >

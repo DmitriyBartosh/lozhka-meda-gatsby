@@ -6,37 +6,34 @@ import { MdOutlineClose } from "react-icons/md";
 import {
   background,
   closeBtn,
-  title,
   inputForm,
   politics,
   formSubmit,
 } from "./form.module.scss";
 
-function Form({ serviceInfo, closeForm }) {
+function Form({ serviceInfo, price, closeForm }) {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({ mode: "onBlur" });
 
-  const url = "/api/telegram.php";
+  const url = "/api/pay.php";
 
   const onSubmit = (data) =>
     axios
       .post(url, {
-        telegram_message:
-          "Заявка с сайта" +
-          "%0A" +
-          `${serviceInfo}` +
-          "%0A" +
-          `${data.name}` +
-          "%0A" +
-          `${data.phone}` +
-          "%0A" +
-          `${data.message}`,
+        service_name:
+          `${serviceInfo}, ` +
+          `${data.name}, ` +
+          `${data.surname}, ` +
+          `${data.phone}, ` +
+          `${data.message}. ` +
+          `На сумму: ${price} руб.`,
+        service_price: price,
       })
-      .then(function () {
-        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+      .then(function (e) {
+        window.location.href = e.data;
       });
 
   return (
@@ -46,13 +43,29 @@ function Form({ serviceInfo, closeForm }) {
           <MdOutlineClose />
         </button>
         <h2>{serviceInfo}</h2>
-        <p className={title}>
-          {" "}
-          Оставьте заявку и мы с Вами свяжемся, для уточнения заказа
-        </p>
 
         <div className={inputForm}>
-          <p>1. Имя</p>
+          <p>1. Фамилия</p>
+          <input
+            {...register("surname", {
+              required: "Введите Вашу фамилию",
+              maxLength: {
+                value: 30,
+                message: "Слишком длинная фамилия...",
+              },
+              pattern: {
+                value: /^[А-Яа-яЁё\s]+$/i,
+                message: "Только русский язык",
+              },
+            })}
+            placeholder="Введите Вашу фамилию"
+            autoComplete="off"
+          />
+          {errors.surname && <span>{errors.surname.message}</span>}
+        </div>
+
+        <div className={inputForm}>
+          <p>2. Имя</p>
           <input
             {...register("name", {
               required: "Введите Ваше имя",
@@ -72,11 +85,10 @@ function Form({ serviceInfo, closeForm }) {
         </div>
 
         <div className={inputForm}>
-          <p>2. Телефон или соц. сети</p>
+          <p>3. Телефон или соц. сети</p>
           <input
             {...register("phone", {
-              required:
-                "Оставьте Ваши контакты для связи и мы обязательно ответим",
+              required: "Оставьте Ваши контакты для связи",
               maxLength: {
                 value: 30,
                 message:
@@ -90,11 +102,8 @@ function Form({ serviceInfo, closeForm }) {
         </div>
 
         <div className={inputForm}>
-          <p>3. Комментарий</p>
+          <p>4. Комментарий</p>
           <input
-            {...register("message", {
-              required: "Комментарий к заказу",
-            })}
             placeholder="Оставьте комментарий к заказу"
             autoComplete="off"
           />
@@ -105,7 +114,7 @@ function Form({ serviceInfo, closeForm }) {
           <br />с <Link to="/policy/">политикой конфиденциальности</Link>
         </p>
         <div className={formSubmit}>
-          <button type="submit">Отправить</button>
+          <button type="submit">Оплатить {price} руб.</button>
         </div>
       </form>
     </div>
