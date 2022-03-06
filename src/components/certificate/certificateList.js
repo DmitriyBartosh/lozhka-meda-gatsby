@@ -37,7 +37,7 @@ function CertificateList() {
 
   const [serviceChange, setServiceChange] = useState("");
 
-  const url = "https://lmmassage.ru/api/pay.php";
+  const url = "http://telegram/api/pay.php";
 
   const handleService = (service, price) => {
     setServiceChange(service);
@@ -50,8 +50,8 @@ function CertificateList() {
         service_name: service,
         service_price: price,
       })
-      .then(function () {
-        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+      .then(response => {
+        console.log(response)
       });
   };
 
