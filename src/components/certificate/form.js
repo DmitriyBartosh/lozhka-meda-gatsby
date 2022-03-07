@@ -11,7 +11,7 @@ import {
   formSubmit,
 } from "./form.module.scss";
 
-function Form({ serviceInfo, price, closeForm }) {
+function Form({ serviceInfo, price, redirectUrl, closeForm }) {
   const {
     register,
     handleSubmit,
@@ -31,6 +31,7 @@ function Form({ serviceInfo, price, closeForm }) {
           `${data.message}. ` +
           `На сумму: ${price} руб.`,
         service_price: price,
+        redirect_url: redirectUrl,
       })
       .then(function (e) {
         window.location.href = e.data;
@@ -43,7 +44,6 @@ function Form({ serviceInfo, price, closeForm }) {
           <MdOutlineClose />
         </button>
         <h2>{serviceInfo}</h2>
-
         <div className={inputForm}>
           <p>1. Фамилия</p>
           <input
@@ -85,17 +85,16 @@ function Form({ serviceInfo, price, closeForm }) {
         </div>
 
         <div className={inputForm}>
-          <p>3. Телефон или соц. сети</p>
+          <p>3. Телефон</p>
           <input
             {...register("phone", {
-              required: "Оставьте Ваши контакты для связи",
+              required: "Необходимо ввести номер телефона",
               maxLength: {
                 value: 30,
-                message:
-                  "Мы думали 30 символов должно хватить... может есть другая ссылка?",
+                message: "Мы думали 30 символов должно хватить...",
               },
             })}
-            placeholder="Телефон или ссылку на соц сети"
+            placeholder="Введите Ваш номер телефона"
             autoComplete="off"
           />
           {errors.phone && <span>{errors.phone.message}</span>}
@@ -104,10 +103,10 @@ function Form({ serviceInfo, price, closeForm }) {
         <div className={inputForm}>
           <p>4. Комментарий</p>
           <input
+            {...register("message")}
             placeholder="Оставьте комментарий к заказу"
             autoComplete="off"
           />
-          {errors.message && <span>{errors.message.message}</span>}
         </div>
         <p className={politics}>
           Оставляя заявку Вы соглашаетесь

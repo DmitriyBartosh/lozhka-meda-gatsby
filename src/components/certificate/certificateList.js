@@ -36,11 +36,13 @@ function CertificateList() {
 
   const [serviceChange, setServiceChange] = useState("");
   const [priceChange, setPriceChange] = useState(0);
+  const [redirectChange, setRedirectChange] = useState("");
 
-  const handleService = (service, price) => {
+  const handleService = (service, price, redirect) => {
     setServiceChange(service);
     setPriceChange(price);
     setIsShow(true);
+    setRedirectChange(redirect);
   };
 
   return (
@@ -49,6 +51,7 @@ function CertificateList() {
         <Form
           serviceInfo={serviceChange}
           price={priceChange}
+          redirectUrl={redirectChange}
           closeForm={() => setIsShow(false)}
         />
       )}
@@ -97,7 +100,8 @@ function CertificateList() {
               onClick={() =>
                 handleService(
                   `Сертификат номинальный на ${nominalValue} руб.`,
-                  Number(nominalValue)
+                  Number(nominalValue),
+                  "https://lmmassage.ru/certificate/sertifikat_nominalnyj.pdf"
                 )
               }
             >
@@ -123,7 +127,7 @@ function CertificateList() {
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
               {massage_data.map((item, i) => {
-                const { title, cost } = item;
+                const { title, cost, certificate } = item;
 
                 return (
                   <>
@@ -136,7 +140,8 @@ function CertificateList() {
                             onClick={() =>
                               handleService(
                                 `${title} / ${item.time} / ${item.quantity}`,
-                                Number(item.price)
+                                Number(item.price),
+                                certificate
                               )
                             }
                           >
@@ -193,7 +198,7 @@ function CertificateList() {
             <IoArrowDown className={scrolldown} />
             <div className={selectcontainer}>
               {relaxspa_data.both.map((item, i) => {
-                const { title, cost } = item;
+                const { title, cost, certificate } = item;
 
                 return (
                   <>
@@ -206,7 +211,8 @@ function CertificateList() {
                             onClick={() =>
                               handleService(
                                 `${title} / ${item.time} / ${item.quantity}`,
-                                Number(item.price)
+                                Number(item.price),
+                                certificate
                               )
                             }
                           >
@@ -246,7 +252,7 @@ function CertificateList() {
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
               {relaxspa_data.man.map((item, i) => {
-                const { title, cost } = item;
+                const { title, cost, certificate } = item;
 
                 return (
                   <>
@@ -259,7 +265,8 @@ function CertificateList() {
                             onClick={() =>
                               handleService(
                                 `${title} / ${item.time} / ${item.quantity}`,
-                                Number(item.price)
+                                Number(item.price),
+                                certificate
                               )
                             }
                           >
@@ -316,7 +323,7 @@ function CertificateList() {
             <IoArrowDown className={scrolldown} />
             <div className={selectcontainer}>
               {relaxspa_data.woman.map((item, i) => {
-                const { title, cost } = item;
+                const { title, cost, certificate } = item;
 
                 return (
                   <>
@@ -329,7 +336,8 @@ function CertificateList() {
                             onClick={() =>
                               handleService(
                                 `${title} / ${item.time} / ${item.quantity}`,
-                                Number(item.price)
+                                Number(item.price),
+                                certificate
                               )
                             }
                           >
