@@ -9,6 +9,7 @@ import {
   inputForm,
   politics,
   formSubmit,
+  memo,
 } from "./form.module.scss";
 
 function Form({ serviceInfo, price, redirectUrl, closeForm }) {
@@ -114,6 +115,15 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
         </p>
         <div className={formSubmit}>
           <button type="submit">Оплатить {price} руб.</button>
+        </div>
+        <div className={memo}>
+          <p>
+            Обязательно <span>укажите почту при оплате</span> для получения чека
+            на сертификат. <span>Чек предъявляется</span> строго вместе{" "}
+            <span>с сертификатом</span>.
+            <br /> По любым возникшим вопросам можно обращаться напрямую или
+            оставить заявку.
+          </p>
         </div>
       </form>
     </div>

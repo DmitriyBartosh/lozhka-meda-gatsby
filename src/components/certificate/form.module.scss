@@ -18,8 +18,28 @@
     position: relative;
     top: -25px;
     padding: 30px;
+    max-width: 600px;
     border-radius: 25px;
     background-color: rgba($color: white, $alpha: 0.05);
+    @media (max-width: $mobile) {
+      padding: 15px 20px;
+    }
+    .memo {
+      position: relative;
+      padding: 20px;
+      background-color: rgba($color: white, $alpha: 0.05);
+      margin-top: 20px;
+      text-align: center;
+      border-radius: 30px;
+      p {
+        font-family: "RobotoLight";
+        font-weight: 300;
+        span {
+          font-family: "RobotoBold";
+          color: white;
+        }
+      }
+    }
     .closeBtn {
       position: absolute;
       right: 6px;
@@ -30,10 +50,10 @@
       height: 40px;
       width: 40px;
       border-radius: 50%;
-      background-color: rgba($color: white, $alpha: 0.15);
+      background-color: rgba($color: white, $alpha: 0.2);
       transition: background-color 0.3s;
       &:hover {
-        background-color: rgba($color: white, $alpha: 0.25);
+        background-color: rgba($color: white, $alpha: 0.3);
       }
     }
     h2 {
@@ -90,13 +110,13 @@
       position: relative;
       width: 100%;
       button {
-        background-color: rgba($color: white, $alpha: 0.15);
+        background-color: rgba($color: white, $alpha: 0.2);
         padding: 15px 30px;
         border-radius: 25px;
         width: 100%;
         transition: background-color 0.3s;
         &:hover {
-          background-color: rgba($color: white, $alpha: 0.25);
+          background-color: rgba($color: white, $alpha: 0.3);
         }
       }
     }
