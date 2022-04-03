@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "gatsby";
 import { useWindowScroll } from "react-use";
-import { IoLogoInstagram, IoLogoVk, IoReorderThree } from "react-icons/io5";
+import { IoLogoVk, IoReorderThree } from "react-icons/io5";
 import {
   header,
   link,
@@ -59,12 +59,12 @@ function Header() {
       </div>
       <div className={desktop}>
         <a
-          href="https://www.instagram.com/studio_massage_/"
+          href="tel:+79676127339"
           target="_blank"
           rel="noreferrer"
           className={link}
         >
-          <IoLogoInstagram />
+          +7 (967) 612 73-39
         </a>
         <a
           href="https://vk.com/fitochka24"

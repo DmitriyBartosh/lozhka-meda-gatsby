@@ -15,6 +15,9 @@
   }
   .desktop {
     position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
     @media (max-width: $tablet) {
       display: none;
     }
@@ -22,6 +25,8 @@
       position: relative;
       padding: 5px;
       margin-left: 10px;
+      display: flex;
+      align-items: center;
       svg {
         width: 20px;
         height: 20px;

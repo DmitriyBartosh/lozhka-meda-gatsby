@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
-import { IoLogoInstagram, IoLogoVk } from "react-icons/io5";
+import { IoCall, IoLogoVk } from "react-icons/io5";
 import {
   container,
   background,
@@ -48,12 +48,12 @@ function Title() {
       </div>
       <div className={mobile}>
         <a
-          href="https://www.instagram.com/studio_massage_/"
+          href="tel:+79676127339"
           target="_blank"
           rel="noreferrer"
           className={link}
         >
-          <IoLogoInstagram />
+          <IoCall />
         </a>
         <a
           href="https://vk.com/fitochka24"
