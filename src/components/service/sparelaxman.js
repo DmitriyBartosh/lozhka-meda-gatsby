@@ -37,7 +37,7 @@ function Sparelaxman() {
     {
       allFile(
         filter: { sourceInstanceName: { eq: "relaxspaman" } }
-        sort: { fields: name, order: ASC }
+        sort: { name: ASC }
       ) {
         edges {
           node {
@@ -79,7 +79,7 @@ function Sparelaxman() {
                   close={() => setSelected(null)}
                 />
               ) : (
-                <div
+                <button
                   className={item}
                   onClick={() => toggle(i)}
                   onKeyDown={() => toggle(i)}
@@ -105,7 +105,7 @@ function Sparelaxman() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </button>
               )}
             </div>
           );

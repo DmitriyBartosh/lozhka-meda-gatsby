@@ -24,7 +24,7 @@ function Header() {
       setShowHeader(false);
       setPositionY(y);
     }
-  }, [y]);
+  }, [y, positionY]);
 
   return (
     <nav className={header}>

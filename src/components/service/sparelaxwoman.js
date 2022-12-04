@@ -37,7 +37,7 @@ function Sparelaxwoman() {
     {
       allFile(
         filter: { sourceInstanceName: { eq: "relaxspawoman" } }
-        sort: { fields: name, order: ASC }
+        sort: { name: ASC }
       ) {
         edges {
           node {
@@ -79,7 +79,7 @@ function Sparelaxwoman() {
                   close={() => setSelected(null)}
                 />
               ) : (
-                <div
+                <button
                   className={item}
                   onClick={() => toggle(i)}
                   onKeyDown={() => toggle(i)}
@@ -105,7 +105,7 @@ function Sparelaxwoman() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </button>
               )}
             </div>
           );

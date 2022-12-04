@@ -37,7 +37,7 @@ function Sparelaxboth() {
     {
       allFile(
         filter: { sourceInstanceName: { eq: "relaxspaboth" } }
-        sort: { fields: name, order: ASC }
+        sort: { name: ASC }
       ) {
         edges {
           node {
@@ -79,7 +79,7 @@ function Sparelaxboth() {
                   close={() => setSelected(null)}
                 />
               ) : (
-                <div
+                <button
                   className={item}
                   onClick={() => toggle(i)}
                   onKeyDown={() => toggle(i)}
@@ -105,7 +105,7 @@ function Sparelaxboth() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </button>
               )}
             </div>
           );

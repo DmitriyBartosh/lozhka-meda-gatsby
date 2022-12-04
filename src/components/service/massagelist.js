@@ -36,7 +36,7 @@ function Massagelist() {
     {
       allFile(
         filter: { sourceInstanceName: { eq: "massage" } }
-        sort: { fields: name, order: ASC }
+        sort: { name: ASC }
       ) {
         edges {
           node {
@@ -77,7 +77,7 @@ function Massagelist() {
                   close={() => setSelected(null)}
                 />
               ) : (
-                <div
+                <button
                   className={item}
                   onClick={() => toggle(i)}
                   onKeyDown={() => toggle(i)}
@@ -103,7 +103,7 @@ function Massagelist() {
                       </div>
                     </div>
                   </div>
-                </div>
+                </button>
               )}
             </div>
           );
