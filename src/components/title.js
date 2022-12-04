@@ -48,7 +48,7 @@ function Title() {
       </div>
       <div className={mobile}>
         <a
-          href="tel:+79676127339"
+          href="tel:+79631912128"
           target="_blank"
           rel="noreferrer"
           className={link}
@@ -64,6 +64,14 @@ function Title() {
           <IoLogoVk />
         </a>
       </div>
+
+      <a
+        href="https://dikidi.net/396341"
+        target="_tblank"
+        className="onlinerecording"
+      >
+        Онлайн запись
+      </a>
     </div>
   );
 }

@@ -31,7 +31,7 @@ function Footer() {
       <div className={right}>
         <p>
           Телефон: <a href="tel:+79676127339">+7 (967) 612-73-39</a> <br />
-          <a href="tel:+73912712201">+7 (391) 271-22-01</a>
+          <a href="tel:+73912712128">+7 (391) 271-21-28</a>
         </p>
         <p className={heycoddes}>
           Сайт создан командой{" "}

@@ -59,12 +59,12 @@ function Header() {
       </div>
       <div className={desktop}>
         <a
-          href="tel:+79676127339"
+          href="tel:+79631912128"
           target="_blank"
           rel="noreferrer"
           className={link}
         >
-          +7 (967) 612 73-39
+          +7 (963) 191 21-28
         </a>
         <a
           href="https://vk.com/fitochka24"

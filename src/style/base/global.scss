@@ -6,9 +6,28 @@ body {
   }
 }
 
-
 main {
   width: 100%;
   min-height: 100vh;
 }
 
+.onlinerecording {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 3rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  transition: all 0.4s;
+  margin-top: 2rem;
+  @media (max-width: $tablet) {
+    border-radius: 25px;
+    height: 40px;
+    padding: 1rem 3rem;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+}
