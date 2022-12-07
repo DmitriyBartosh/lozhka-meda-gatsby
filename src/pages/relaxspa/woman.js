@@ -1,8 +1,13 @@
 import React from "react";
+import Layout from "../../components/layout";
 import Sparelaxwoman from "../../components/service/sparelaxwoman";
 
 function Woman() {
-  return <Sparelaxwoman />;
+  return (
+    <Layout>
+      <Sparelaxwoman />
+    </Layout>
+  );
 }
 
 export default Woman;

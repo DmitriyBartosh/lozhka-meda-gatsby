@@ -25,16 +25,17 @@ function Presentation() {
         src="../../images/about/back1.png"
         alt="массаж"
         className={backimgone}
+        placeholder="none"
       />
       <div className={container}>
         <BsChevronDoubleDown className={scrolldown} />
         <h2>О нас</h2>
         <p style={{ textAlign: "center" }}>
           Студия основана в 2010 году, основой нашей деятельности является:
-          массаж, фитобочка, релакс программы (спа), оздоровительные сеансы
-          соляной комнаты. Все для того, чтобы человек жил в гармонии здорового
-          тела, в здоровом физическом и душевном состоянии. Мы профессионально
-          практикуем массажные техники различных видов.
+          массаж, фитобочка, релакс программы (спа). Все для того, чтобы человек
+          жил в гармонии здорового тела, в здоровом физическом и душевном
+          состоянии. Мы профессионально практикуем массажные техники различных
+          видов.
         </p>
         <div className={preview}>
           <div className={video}>
@@ -57,6 +58,7 @@ function Presentation() {
             src="../../images/about/back2.png"
             alt="массаж png"
             className={backimgtwo}
+            placeholder="none"
           />
         </div>
         <div className={infoservice}>
@@ -106,7 +108,7 @@ function Presentation() {
           <div className={right}>
             <div className={photo}>
               <StaticImage
-                src="../../images/about/2.JPG"
+                src="../../images/about/2.jpg"
                 alt="ложка меда массажная студия"
               />
             </div>

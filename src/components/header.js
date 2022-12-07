@@ -17,14 +17,16 @@ function Header() {
   const [showHeader, setShowHeader] = useState(true);
 
   useEffect(() => {
-    if (y < positionY) {
+    if (y < positionY || y === 0) {
       setShowHeader(true);
       setPositionY(y);
     } else {
       setShowHeader(false);
       setPositionY(y);
     }
-  }, [y, positionY]);
+    console.log("y: ", y);
+    console.log("positionY: ", positionY);
+  }, [y]);
 
   return (
     <nav className={header}>
