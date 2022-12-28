@@ -1,0 +1,485 @@
+import React, { useState } from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import Form from "./form";
+import { IoArrowDown } from "react-icons/io5";
+import {
+  container,
+  title,
+  nominal,
+  massage,
+  relaxspaboth,
+  relaxspaman,
+  relaxspawoman,
+  inputrange,
+  info,
+  desc,
+  value,
+  image,
+  order,
+  left,
+  right,
+  header,
+  select,
+  selectcontainer,
+  btnservice,
+  servicecontainer,
+  scrolldown,
+  priceservice,
+} from "./certificate.module.scss";
+import { btn } from "../../style/other.module.scss";
+
+import relaxspa_data from "../../data/relaxspa.json";
+import massage_data from "../../data/massage.json";
+
+function CertificateListSpecial() {
+  const [nominalValue, setNominalValue] = useState("500");
+  const [isShow, setIsShow] = useState(false);
+
+  const [serviceChange, setServiceChange] = useState("");
+  const [priceChange, setPriceChange] = useState(0);
+  const [redirectChange, setRedirectChange] = useState("");
+
+  const handleService = (service, price, redirect) => {
+    setServiceChange(service);
+    setPriceChange(price);
+    setIsShow(true);
+    setRedirectChange(redirect);
+  };
+
+  return (
+    <div className={container}>
+      {isShow && (
+        <Form
+          serviceInfo={serviceChange}
+          price={priceChange}
+          redirectUrl={redirectChange}
+          closeForm={() => setIsShow(false)}
+        />
+      )}
+      <div className={title}>
+        <p>
+          Ищите подарок для друга или подруги? Подарочный сертификат возможен на
+          любую услугу или номинал в студию массажа и фитобочки «Ложка меда» -
+          это идеальный вариант! Мастера высочайшего класса, удобное время
+          работы. Выберите подходящий сертификат и оформите покупку онлайн.
+        </p>
+      </div>
+      <div className={nominal}>
+        <h2>Сертификат номинальный</h2>
+        <p>
+          Сертификат действует один раз до полного использования. Срок действия
+          6 месяцев с даты выдачи; Возврату и обмену на денежные средства не
+          подлежит, возможна передача третьим лицам. Сертификат отдается в
+          электронном или печатном виде, после покупки с вами свяжется менеджер
+          для уточнения всех вопросов.
+        </p>
+        <StaticImage
+          src="../../images/certificate/nominal.jpg"
+          alt="Сертификат массажная студия"
+          layout="fullWidth"
+          className={image}
+        />
+        <div className={inputrange}>
+          <input
+            type="range"
+            min="500"
+            max="25000"
+            step="500"
+            value={nominalValue}
+            onChange={(e) => setNominalValue(e.target.value)}
+          />
+          <div className={info}>
+            <p className={desc}>
+              Подвиньте ползунок и выберите нужную сумму для приобретения
+              сертификата
+            </p>
+            <p className={value}>{nominalValue} руб. / 25000 руб.</p>
+          </div>
+          <div className={order}>
+            <button
+              className={btn}
+              onClick={() =>
+                handleService(
+                  `Сертификат номинальный на ${nominalValue} руб.`,
+                  Number(nominalValue),
+                  "https://lmmassage.ru/certificate/sertifikat_nominalnyj.pdf"
+                )
+              }
+            >
+              Приобрести сертификат
+            </button>
+          </div>
+        </div>
+      </div>
+      <div className={massage}>
+        <div className={header}>
+          <h2>
+            <span>Скидка 10%</span>
+            <br />
+            Сертификат на массаж
+          </h2>
+          <p>
+            Сертификат действует один раз до полного использования. Срок
+            действия 6 месяцев с даты выдачи; Возврату и обмену на денежные
+            средства не подлежит, возможна передача третьим лицам. Сертификат
+            отдается в электронном или печатном виде, после покупки с вами
+            свяжется менеджер для уточнения всех вопросов.
+          </p>
+        </div>
+        <div className={select}>
+          <div className={left}>
+            <IoArrowDown className={scrolldown} />
+            <h2>Выберите услугу</h2>
+            <div className={selectcontainer}>
+              {massage_data.map((item, i) => {
+                const { title, cost, certificate } = item;
+
+                return (
+                  <>
+                    <h3>{title}</h3>
+                    <div className={servicecontainer}>
+                      {cost.map((item) => {
+                        const { discount, price } = item;
+                        const isDiscount = discount.apply;
+                        const discountAmount = discount.percent
+                          ? Math.ceil(price - price * (discount.count / 100))
+                          : discount.count;
+
+                        if (isDiscount) {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(discountAmount),
+                                  certificate
+                                )
+                              }
+                            >
+                              <p className={priceservice}>
+                                {`${discountAmount} руб.`}
+                                <span>{item.price}</span>
+                              </p>
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        } else {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(item.price),
+                                  certificate
+                                )
+                              }
+                            >
+                              {`${item.price} руб.`}
+                              <br />
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        }
+                      })}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+          <div className={right}>
+            <StaticImage
+              src="../../images/certificate/massage.jpg"
+              alt="Сертификат массажная студия"
+              layout="fullWidth"
+              className={image}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={relaxspaboth}>
+        <div className={header}>
+          <h2>
+            Сертификат на Relax & SPA
+            <br />
+            для всех <span>Скидка 10%</span>
+          </h2>
+          <p>
+            Сертификат действует один раз до полного использования. Срок
+            действия 6 месяцев с даты выдачи; Возврату и обмену на денежные
+            средства не подлежит, возможна передача третьим лицам. Сертификат
+            отдается в электронном или печатном виде, после покупки с вами
+            свяжется менеджер для уточнения всех вопросов.
+          </p>
+        </div>
+        <div className={select}>
+          <div className={left}>
+            <StaticImage
+              src="../../images/certificate/relaxspa.jpg"
+              alt="Сертификат массажная студия"
+              layout="fullWidth"
+              className={image}
+            />
+          </div>
+          <div className={right}>
+            <h2>Выберите услугу</h2>
+            <IoArrowDown className={scrolldown} />
+            <div className={selectcontainer}>
+              {relaxspa_data.both.map((item, i) => {
+                const { title, cost, certificate } = item;
+
+                return (
+                  <>
+                    <h3>{title}</h3>
+                    <div className={servicecontainer}>
+                      {cost.map((item) => {
+                        const { discount, price } = item;
+                        const isDiscount = discount.apply;
+                        const discountAmount = discount.percent
+                          ? Math.ceil(price - price * (discount.count / 100))
+                          : discount.count;
+
+                        if (isDiscount) {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(discountAmount),
+                                  certificate
+                                )
+                              }
+                            >
+                              <p className={priceservice}>
+                                {`${discountAmount} руб.`}
+                                <span>{item.price}</span>
+                              </p>
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        } else {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(item.price),
+                                  certificate
+                                )
+                              }
+                            >
+                              {`${item.price} руб.`}
+                              <br />
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        }
+                      })}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={relaxspaman}>
+        <div className={header}>
+          <h2>
+            Сертификат на Relax & SPA
+            <br />
+            для мужчин <span>Скидка 10%</span>
+          </h2>
+          <p>
+            Сертификат действует один раз до полного использования. Срок
+            действия 6 месяцев с даты выдачи; Возврату и обмену на денежные
+            средства не подлежит, возможна передача третьим лицам. Сертификат
+            отдается в электронном или печатном виде, после покупки с вами
+            свяжется менеджер для уточнения всех вопросов.
+          </p>
+        </div>
+        <div className={select}>
+          <div className={left}>
+            <h2>Выберите услугу</h2>
+            <div className={selectcontainer}>
+              {relaxspa_data.man.map((item, i) => {
+                const { title, cost, certificate } = item;
+
+                return (
+                  <>
+                    <h3>{title}</h3>
+                    <div className={servicecontainer}>
+                      {cost.map((item) => {
+                        const { discount, price } = item;
+                        const isDiscount = discount.apply;
+                        const discountAmount = discount.percent
+                          ? Math.ceil(price - price * (discount.count / 100))
+                          : discount.count;
+
+                        if (isDiscount) {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(discountAmount),
+                                  certificate
+                                )
+                              }
+                            >
+                              <p className={priceservice}>
+                                {`${discountAmount} руб.`}
+                                <span>{item.price}</span>
+                              </p>
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        } else {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(item.price),
+                                  certificate
+                                )
+                              }
+                            >
+                              {`${item.price} руб.`}
+                              <br />
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        }
+                      })}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+          <div className={right}>
+            <StaticImage
+              src="../../images/certificate/relaxspa.jpg"
+              alt="Сертификат массажная студия"
+              layout="fullWidth"
+              className={image}
+            />
+          </div>
+        </div>
+      </div>
+      <div className={relaxspawoman}>
+        <div className={header}>
+          <h2>
+            Сертификат на Relax & SPA
+            <br />
+            для женщин <span>Скидка 10%</span>
+          </h2>
+          <p>
+            Сертификат действует один раз до полного использования. Срок
+            действия 6 месяцев с даты выдачи; Возврату и обмену на денежные
+            средства не подлежит, возможна передача третьим лицам. Сертификат
+            отдается в электронном или печатном виде, после покупки с вами
+            свяжется менеджер для уточнения всех вопросов.
+          </p>
+        </div>
+        <div className={select}>
+          <div className={left}>
+            <StaticImage
+              src="../../images/certificate/relaxspa.jpg"
+              alt="Сертификат массажная студия"
+              layout="fullWidth"
+              className={image}
+            />
+          </div>
+          <div className={right}>
+            <h2>Выберите услугу</h2>
+            <IoArrowDown className={scrolldown} />
+            <div className={selectcontainer}>
+              {relaxspa_data.woman.map((item, i) => {
+                const { title, cost, certificate } = item;
+
+                return (
+                  <>
+                    <h3>{title}</h3>
+                    <div className={servicecontainer}>
+                      {cost.map((item) => {
+                        const { discount, price } = item;
+                        const isDiscount = discount.apply;
+                        const discountAmount = discount.percent
+                          ? Math.ceil(price - price * (discount.count / 100))
+                          : discount.count;
+
+                        if (isDiscount) {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(discountAmount),
+                                  certificate
+                                )
+                              }
+                            >
+                              <p className={priceservice}>
+                                {`${discountAmount} руб.`}
+                                <span>{item.price}</span>
+                              </p>
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        } else {
+                          return (
+                            <button
+                              className={btnservice}
+                              onClick={() =>
+                                handleService(
+                                  `${title} / ${item.time} / ${item.quantity}`,
+                                  Number(item.price),
+                                  certificate
+                                )
+                              }
+                            >
+                              {`${item.price} руб.`}
+                              <br />
+                              {`${item.time}`}
+                              <br />
+                              {`${item.quantity}`}
+                            </button>
+                          );
+                        }
+                      })}
+                    </div>
+                  </>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default CertificateListSpecial;

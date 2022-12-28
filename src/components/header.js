@@ -24,8 +24,6 @@ function Header() {
       setShowHeader(false);
       setPositionY(y);
     }
-    console.log("y: ", y);
-    console.log("positionY: ", positionY);
   }, [y]);
 
   return (

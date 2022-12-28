@@ -9,6 +9,11 @@
     },
     "cost": [
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 1599,
         "time": "1 час",
         "quantity": "1 человек"
@@ -28,6 +33,11 @@
     },
     "cost": [
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 4949,
         "time": "2 часа",
         "quantity": "2 человека"
@@ -47,26 +57,51 @@
     },
     "cost": [
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 489,
         "time": "15 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 649,
         "time": "20 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 999,
         "time": "30 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 1459,
         "time": "45 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 1949,
         "time": "60 мин.",
         "quantity": "1 человек"
@@ -86,21 +121,41 @@
     },
     "cost": [
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 499,
         "time": "15 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 669,
         "time": "20 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 999,
         "time": "30 мин.",
         "quantity": "1 человек"
       },
       {
+        "discount": {
+          "apply": true,
+          "percent": true,
+          "count": 10
+        },
         "price": 1999,
         "time": "60 мин.",
         "quantity": "1 человек"

@@ -6,6 +6,7 @@ import Navigation from "./navigation";
 import { useWindowScroll, useLocation, useWindowSize } from "react-use";
 import { main } from "../style/other.module.scss";
 import MetaTag from "./metaTag";
+import Buttonlink from "./certificate/buttonlink";
 
 function Layout({ children }) {
   const { width } = useWindowSize();
@@ -25,6 +26,7 @@ function Layout({ children }) {
       <main className={main}>
         <Title />
         <Navigation />
+        <Buttonlink />
         {children}
       </main>
       <Footer />

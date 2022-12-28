@@ -10,11 +10,21 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 2949,
           "time": "2 часа",
           "quantity": "1 человек"
         },
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 5449,
           "time": "2 часа",
           "quantity": "2 человека"
@@ -34,11 +44,21 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": false,
+            "percent": true,
+            "count": 10
+          },
           "price": 3149,
           "time": "2 часа",
           "quantity": "1 человек"
         },
         {
+          "discount": {
+            "apply": false,
+            "percent": true,
+            "count": 10
+          },
           "price": 5949,
           "time": "2 часа",
           "quantity": "2 человека"
@@ -58,11 +78,21 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 4349,
           "time": "2ч.40мин.",
           "quantity": "1 человек"
         },
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 8349,
           "time": "2ч.40мин.",
           "quantity": "2 человека"
@@ -82,11 +112,21 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": false,
+            "percent": true,
+            "count": 10
+          },
           "price": 3349,
           "time": "2 часа",
           "quantity": "1 человек"
         },
         {
+          "discount": {
+            "apply": false,
+            "percent": true,
+            "count": 10
+          },
           "price": 6449,
           "time": "2 часа",
           "quantity": "2 человек"
@@ -106,11 +146,21 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 3149,
           "time": "2 часа",
           "quantity": "1 человек"
         },
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 5949,
           "time": "2 часа",
           "quantity": "2 человека"
@@ -130,6 +180,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 8949,
           "time": "3 часа",
           "quantity": "2 человека"
@@ -151,6 +206,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 4649,
           "time": "3ч.",
           "quantity": "1 человек"
@@ -170,6 +230,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 3649,
           "time": "2ч./30мин.",
           "quantity": "1 человек"
@@ -191,6 +256,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 4949,
           "time": "3 час",
           "quantity": "1 человек"
@@ -210,6 +280,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 849,
           "time": "30 мин.",
           "quantity": "1 человек"
@@ -229,6 +304,11 @@
       },
       "cost": [
         {
+          "discount": {
+            "apply": true,
+            "percent": true,
+            "count": 10
+          },
           "price": 4599,
           "time": "3 часа",
           "quantity": "1 человек"
