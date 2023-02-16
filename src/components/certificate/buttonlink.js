@@ -12,7 +12,7 @@ function Buttonlink() {
             <span>Скидка 10%</span> на все подарочные сертификаты
           </h2>
         </div>
-        <div className={styles.subtitle}>скидка действует до 15 января</div>
+        <div className={styles.subtitle}>скидка действует до 1 марта</div>
         <div className={styles.description}>
           <p>
             Подарочный сертификат возможен на любую услугу или номинал. Выберите
