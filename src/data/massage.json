@@ -3,7 +3,7 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 1 человека",
     "short_cost": {
-      "price": "1599 руб.",
+      "price": "1399 руб. <span>1599</span>",
       "time": "1 час",
       "quantity": 1
     },
@@ -11,8 +11,8 @@
       {
         "discount": {
           "apply": true,
-          "percent": true,
-          "count": 10
+          "percent": false,
+          "count": 1399
         },
         "price": 1599,
         "time": "1 час",
@@ -34,7 +34,7 @@
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -58,7 +58,7 @@
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -68,7 +68,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -78,7 +78,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -88,7 +88,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -98,7 +98,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -122,7 +122,7 @@
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -132,7 +132,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -142,7 +142,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },
@@ -152,7 +152,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": true,
           "count": 10
         },

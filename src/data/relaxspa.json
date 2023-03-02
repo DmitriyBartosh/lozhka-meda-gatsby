@@ -4,7 +4,7 @@
       "title": "Программа Кокосовый рай",
       "short_description": "Окунись на остров райского наслаждения с ароматом кокоса. Программа рассчитана на 1 или 2 человека",
       "short_cost": {
-        "price": "от 2949 руб.",
+        "price": "от 2499 руб. <span>2949</span>",
         "time": "2 часа",
         "quantity": 2
       },
@@ -12,8 +12,8 @@
         {
           "discount": {
             "apply": true,
-            "percent": true,
-            "count": 10
+            "percent": false,
+            "count": 2499
           },
           "price": 2949,
           "time": "2 часа",
@@ -22,8 +22,8 @@
         {
           "discount": {
             "apply": true,
-            "percent": true,
-            "count": 10
+            "percent": false,
+            "count": 4849
           },
           "price": 5449,
           "time": "2 часа",
@@ -79,7 +79,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -89,7 +89,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -147,7 +147,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -157,7 +157,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -181,7 +181,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -207,7 +207,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -231,7 +231,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -250,7 +250,7 @@
       "title": "SPA день Шоколадно-ванильный десерт",
       "short_description": "Запах шоколада заставляет нас испытать нечто удивительное. Когда мы начинаем вдыхать приятный аромат, наше настроение значительно улучшается.",
       "short_cost": {
-        "price": "4949 руб.",
+        "price": "4199 руб. <span>4949</span>",
         "time": "3 часа",
         "quantity": 1
       },
@@ -258,8 +258,8 @@
         {
           "discount": {
             "apply": true,
-            "percent": true,
-            "count": 10
+            "percent": false,
+            "count": 4199
           },
           "price": 4949,
           "time": "3 час",
@@ -281,7 +281,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": true,
             "count": 10
           },
@@ -298,7 +298,7 @@
       "title": "Программа Ягодка",
       "short_description": "Процедура массажа направлена, как на снижение веса, так и на достижение косметического эффекта Рассчитана на 1 человека",
       "short_cost": {
-        "price": "4599 руб.",
+        "price": "3999 руб. <span>4599 руб.</span>",
         "time": "3 часа",
         "quantity": 1
       },
@@ -306,8 +306,8 @@
         {
           "discount": {
             "apply": true,
-            "percent": true,
-            "count": 10
+            "percent": false,
+            "count": 3999
           },
           "price": 4599,
           "time": "3 часа",

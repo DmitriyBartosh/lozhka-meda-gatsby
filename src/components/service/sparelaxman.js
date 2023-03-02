@@ -14,6 +14,7 @@ import {
   description,
   price_info,
   cost,
+  costtext,
   time,
 } from "./massagelist.module.scss";
 import Detail from "./detail";
@@ -97,7 +98,12 @@ function Sparelaxman() {
                     <div className={price_item}>
                       <div className={number}>{data.short_cost.quantity}</div>
                       <div className={price_info}>
-                        <p>{data.short_cost.price}</p>
+                        <p
+                          className={costtext}
+                          dangerouslySetInnerHTML={{
+                            __html: data.short_cost.price,
+                          }}
+                        />
                         <p className={time}>
                           <span>ВРЕМЯ: </span>
                           {data.short_cost.time}

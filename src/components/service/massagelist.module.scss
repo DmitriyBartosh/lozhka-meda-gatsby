@@ -159,6 +159,10 @@
             @media (max-width: $mobile) {
               margin-bottom: 0px;
             }
+            .costtext span {
+              text-decoration: line-through;
+              font-family: "RobotoLight";
+            }
             .time {
               span {
                 @media (max-width: $mobile) {

@@ -5,21 +5,18 @@ import { StaticImage } from "gatsby-plugin-image";
 
 function Buttonlink() {
   return (
-    <div className={styles.container} id="certificatelink">
+    <div className={styles.container}>
       <div className={styles.left}>
         <div className={styles.title}>
           <h2>
-            <span>Скидка 10%</span> на все подарочные сертификаты
+            <span>Весенние скидки</span> на подарочные сертификаты
           </h2>
         </div>
-        <div className={styles.subtitle}>скидка действует до 1 марта</div>
+        <div className={styles.subtitle}>скидка действует до 13 апреля</div>
         <div className={styles.description}>
-          <p>
-            Подарочный сертификат возможен на любую услугу или номинал. Выберите
-            подходящий сертификат и оформите покупку онлайн.
-          </p>
+          <p>Выберите подходящий сертификат и оформите покупку онлайн.</p>
         </div>
-        <Link to="/certificate" className={styles.link}>
+        <Link to="/certificate" className={styles.link} id="certificatelink">
           Приобрести
         </Link>
         <div className={styles.background}>
@@ -31,18 +28,18 @@ function Buttonlink() {
         </div>
       </div>
       <div className={styles.right}>
-        <h2>Программа:</h2>
+        <h2>Сертификаты со скидкой:</h2>
         <p>
-          <span>Сеанс фитобочки кедровой</span> 15-20 минут
+          <span>Кокосовый рай</span> 2 часа
           <br />
           <br />
-          <span>Массаж всего тела</span> 60 минут
+          <span>Таёжная сказка</span> 60 минут
           <br />
           <br />
-          <span>Массаж стоп точечный</span> 20 минут
+          <span>Ягодка</span> 3 часа
           <br />
           <br />
-          <span>Травяной чай с ложкой меда</span>
+          <span>Шоколадно-ванильный десерт</span> 3 часа
         </p>
       </div>
     </div>

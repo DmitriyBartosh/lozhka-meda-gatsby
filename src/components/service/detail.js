@@ -16,6 +16,7 @@ import {
   orderInfo,
   included,
   programm,
+  oldprice,
 } from "./detail.module.scss";
 import "swiper/css";
 
@@ -28,7 +29,7 @@ function Detail({ data, imageSrc, close }) {
 
   // Выбор палочки для эскимо
   const handleForm = (price, time, quantity) => {
-    setOrderDetail(`${quantity}/ ${price} руб. / ${time}`);
+    setOrderDetail(`${quantity} / ${price} руб. / ${time}`);
     setCloseForm(true);
     detailRef.current.scrollTop = 0;
   };
@@ -73,17 +74,32 @@ function Detail({ data, imageSrc, close }) {
             className={price}
           >
             {data.cost.map((item, i) => {
-              const { price, time, quantity } = item;
+              const { price, time, quantity, discount } = item;
+
+              const discountAmount = discount.percent
+                ? Math.ceil(price - price * (discount.count / 100))
+                : discount.count;
+
+              const formPrice = discount.apply ? discountAmount : price;
 
               return (
                 <SwiperSlide key={`detail_${i}`} className={order}>
                   <div className={orderInfo}>
                     <p>
-                      {quantity} / {price} руб.
+                      {quantity}
+                      <br />
+                      {discount.apply ? (
+                        <>
+                          {`${discountAmount} руб. `}
+                          <span className={oldprice}>{price}</span>
+                        </>
+                      ) : (
+                        `${price} руб.`
+                      )}
                     </p>
                     <p>{time}</p>
                   </div>
-                  <button onClick={() => handleForm(price, time, quantity)}>
+                  <button onClick={() => handleForm(formPrice, time, quantity)}>
                     Забронировать
                   </button>
                 </SwiperSlide>
