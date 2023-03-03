@@ -94,8 +94,12 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
                 value: 30,
                 message: "Мы думали 30 символов должно хватить...",
               },
+              pattern: {
+                value: /^[0-9+()-\s]+$/i,
+                message: "Введите телефон по типу +79008007060",
+              },
             })}
-            placeholder="Введите Ваш номер телефона"
+            placeholder="Введите Ваш номер телефона (по типу +79008007060)"
             autoComplete="off"
           />
           {errors.phone && <span>{errors.phone.message}</span>}
