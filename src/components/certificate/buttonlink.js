@@ -12,7 +12,7 @@ function Buttonlink() {
             <span>Весенние скидки</span> на подарочные сертификаты
           </h2>
         </div>
-        <div className={styles.subtitle}>скидка действует до 13 апреля</div>
+        <div className={styles.subtitle}>скидка действует до 25 мая</div>
         <div className={styles.description}>
           <p>Выберите подходящий сертификат и оформите покупку онлайн.</p>
         </div>
