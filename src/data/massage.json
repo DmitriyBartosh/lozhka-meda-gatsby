@@ -3,14 +3,14 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 1 человека",
     "short_cost": {
-      "price": "1399 руб. <span>1599</span>",
+      "price": "1399 руб.",
       "time": "1 час",
       "quantity": 1
     },
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": false,
           "count": 1399
         },
