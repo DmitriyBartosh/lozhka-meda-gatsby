@@ -42,7 +42,7 @@ MetaTag.propTypes = {
 };
 
 MetaTag.defaultProps = {
-  title: "Студия массажа | Ложка меда",
+  title: "Студия массажа | Время для себя",
 };
 
 const query = graphql`

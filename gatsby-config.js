@@ -4,14 +4,14 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteTitle: "Студия массажа | Ложка меда",
-    siteUrl: "https://lmmassage.ru/",
+    siteTitle: "Студия массажа | Время для себя",
+    siteUrl: "https://yourselfmassage.ru/",
     siteDescription:
       "Студия основана в 2010 году, основой нашей деятельности является: массаж, фитобочка, релакс программы (спа), оздоровительные сеансы соляной комнаты.",
     siteKeyWords:
       "массаж, фитобочка, релакс программы (спа), оздоровительные сеансы, соляной комнаты",
     siteImage: "imagepreview.png",
-    siteTwitter: "@lozhka_meda",
+    siteTwitter: "@yourselfmassage",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -29,14 +29,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Студия массажа | Ложка меда`,
-        short_name: `Ложка меда`,
+        name: `Студия массажа | Время для себя`,
+        short_name: `Время для себя`,
         start_url: `/`,
         background_color: `#dccbb6`,
         theme_color: `#dccbb6`,
         display: `standalone`,
         lang: `ru`,
-        icon: `src/images/logo.jpg`,
+        icon: `src/images/favicon.svg`,
       },
     },
     "gatsby-plugin-sitemap",
