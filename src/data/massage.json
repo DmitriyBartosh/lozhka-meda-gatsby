@@ -1,5 +1,77 @@
 [
   {
+    "title": "Здоровая спина",
+    "short_description": "Включает техники классического и восточного гуаша",
+    "short_cost": {
+      "price": "1449 руб.",
+      "time": "1 час",
+      "quantity": 1
+    },
+    "cost": [
+      {
+        "discount": {
+          "apply": false,
+          "percent": false,
+          "count": 1449
+        },
+        "price": 1449,
+        "time": "1 час",
+        "quantity": "1 человек"
+      }
+    ],
+    "description": "<p>Включает техники классического и восточного гуаша.</p>",
+    "programm": "<h3>Программа:</h3><br/><p>// Массаж спины швз 30 мин.<br/>// Баночный вакуумный 15 мин.<br/>// Завершающий крем биоанельгетик<br/>// Травяной чай с мёдом</p>",
+    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina.pdf"
+  },
+  {
+    "title": "Здоровая спина в перерыве на обед",
+    "short_description": "Отлично подойдёт для офисных сотрудников и не только",
+    "short_cost": {
+      "price": "699 руб.",
+      "time": "30 мин",
+      "quantity": 1
+    },
+    "cost": [
+      {
+        "discount": {
+          "apply": false,
+          "percent": false,
+          "count": 699
+        },
+        "price": 699,
+        "time": "30 мин",
+        "quantity": "1 человек"
+      }
+    ],
+    "description": "<p>Отлично подойдёт для офисных сотрудников и не только.</p>",
+    "programm": "<h3>Программа:</h3><br/><p>// Массаж спины швз 20 мин.<br/>// Завершающий крем биоанельгетик<br/>// Травяной чай с мёдом</p>",
+    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina_v_pereryve_na_obed.pdf"
+  },
+  {
+    "title": "Здоровая спина. Полный комплекс",
+    "short_description": "Для тех, кто решил основательно заняться своей спиной",
+    "short_cost": {
+      "price": "2599 руб.",
+      "time": "1ч.20 мин",
+      "quantity": 1
+    },
+    "cost": [
+      {
+        "discount": {
+          "apply": false,
+          "percent": false,
+          "count": 2599
+        },
+        "price": 2599,
+        "time": "1ч.20 мин",
+        "quantity": "1 человек"
+      }
+    ],
+    "description": "<p>Для тех, кто решил основательно заняться своей спиной.</p>",
+    "programm": "<h3>Программа:</h3><br/><p>// Массаж спины швз, грудного отдела, поясницы 20-30 мин.<br/>// Баночный вакуумный 10-15 мин.<br/>// Медовый массаж<br/>// Травяной чай с мёдом</p>",
+    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina_polny_komplex.pdf"
+  },
+  {
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 1 человека",
     "short_cost": {
