@@ -106,16 +106,16 @@
       "title": "Программа Банановый рай",
       "short_description": "Масла банана снимут чувство беспокойства и стресса. Предотвратят потерю влаги и появление морщин, восстановят свежесть и жизненную силу. Рассчитана на 1 или 2 человека",
       "short_cost": {
-        "price": "от 3349 руб.",
+        "price": "от 2999 руб. <s>3349 руб.</s>",
         "time": "2 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": false,
-            "percent": true,
-            "count": 10
+            "apply": true,
+            "percent": false,
+            "count": 2999
           },
           "price": 3349,
           "time": "2 часа",
@@ -123,9 +123,9 @@
         },
         {
           "discount": {
-            "apply": false,
-            "percent": true,
-            "count": 10
+            "apply": true,
+            "percent": false,
+            "count": 5899
           },
           "price": 6449,
           "time": "2 часа",
@@ -272,16 +272,16 @@
       "title": "Мужской SPA день",
       "short_description": "Это программа ухода, гарантирующая общее оздоровление организма, анти-стресс и прекрасный эстетический эффект!",
       "short_cost": {
-        "price": "3649 руб.",
+        "price": "2999 руб. <s>3649 руб.</s>",
         "time": "2ч./30мин.",
         "quantity": 1
       },
       "cost": [
         {
           "discount": {
-            "apply": false,
-            "percent": true,
-            "count": 10
+            "apply": true,
+            "percent": false,
+            "count": 2999
           },
           "price": 3649,
           "time": "2ч./30мин.",

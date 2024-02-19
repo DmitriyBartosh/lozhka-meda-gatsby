@@ -1,134 +1,101 @@
 @import "../../style/abstracts/variables.scss";
 
 .container {
-    position: relative;
-    display: grid;
-    grid-template-columns: 4fr 2fr;
-    width: 1200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 325px;
+  border-radius: 2rem;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  overflow: hidden;
+  margin-top: 75px;
+  padding: 5rem 3rem;
+  @media (max-width: $tablet) {
     border-radius: 2rem;
-    -webkit-mask-image: -webkit-radial-gradient(white, black);
     overflow: hidden;
-    margin-bottom: 75px;
-    @media (max-width: $medium) {
-        width: 1000px;
-        height: 325px;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    padding: 3rem 2rem;
+    width: 70vw;
+    max-width: 400px;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    height: auto;
+    grid-template-columns: 1fr;
+  }
+  @media (max-width: $mobile) {
+    width: 90vw;
+    width: calc(100vw - 20px);
+    margin: 0px auto;
+    margin-bottom: 50px;
+  }
+  .title {
+    h2 {
+      font-family: "BebasNeue";
+      text-align: center;
+      font-size: 3.5rem;
+      line-height: 1;
+      color: #603117;
+      @media (max-width: $tablet) {
+        font-size: 2rem;
+      }
+      span {
+        display: block;
+        font-size: 5rem;
+        @media (max-width: $tablet) {
+          font-size: 3rem;
+        }
+      }
     }
-    @media (max-width: $tablet) {
-        width: 70vw;
-        max-width: 400px;
-        margin: 0px auto;
-        margin-bottom: 50px;
-        height: auto;
-        grid-template-columns: 1fr;
-    }
+  }
+  .subtitle {
+    font-family: "BebasNeue";
+    color: #ac7f2e;
+    font-size: 2.5rem;
+    margin: 1.5rem 0;
     @media (max-width: $mobile) {
-        width: 90vw;
-        width: calc(100vw - 20px);
-        margin: 0px auto;
-        margin-bottom: 50px;
+      font-size: 1.75rem;
+      margin: 1rem 0;
     }
-    .left {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 5rem 3rem;
-        @media (max-width: $tablet) {
-            border-radius: 2rem;
-            overflow: hidden;
-            -webkit-mask-image: -webkit-radial-gradient(white, black);
-            padding: 3rem 2rem;
-        }
-        .title {
-            h2 {
-                font-family: "BebasNeue";
-                text-align: center;
-                font-size: 3.5rem;
-                line-height: 1;
-                color: #603117;
-                @media (max-width: $tablet) {
-                    font-size: 2rem;
-                }
-                span {
-                    display: block;
-                    font-size: 5rem;
-                    @media (max-width: $tablet) {
-                        font-size: 3rem;
-                    }
-                }
-            }
-        }
-        .subtitle {
-            font-family: "BebasNeue";
-            color: #ac7f2e;
-            font-size: 2.5rem;
-            margin: 1.5rem 0;
-            @media (max-width: $mobile) {
-                font-size: 1.75rem;
-                margin: 1rem 0;
-            }
-        }
-        .description {
-            margin-bottom: 2rem;
-            @media (max-width: $tablet) {
-                display: none;
-            }
-            p {
-                text-align: center;
-                font-family: "RobotoLight";
-            }
-        }
-        .link {
-            position: relative;
-            display: inline-block;
-            padding: 15px 30px;
-            color: white;
-            border-radius: 30px;
-            text-transform: uppercase;
-            background-color: #7a8566;
-            font-size: 1.25rem;
-            line-height: 1.25rem;
-            transition: all 0.4s;
-            &:hover {
-                transform: scale(0.975);
-                opacity: 0.95;
-            }
-        }
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            .gatsbyimg {
-                width: 100%;
-                height: 100%;
-            }
-        }
+  }
+  .description {
+    margin-bottom: 2rem;
+    @media (max-width: $tablet) {
+      display: none;
     }
-    .right {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: #ac7f2e;
-        color: white;
-        padding: 5rem 3rem;
-        @media (max-width: $tablet) {
-            display: none;
-        }
-        h2 {
-            margin-bottom: 2rem;
-        }
-        p {
-            font-family: "RobotoLight";
-            span {
-                font-family: "RobotoBold";
-                display: block;
-            }
-        }
+    p {
+      text-align: center;
+      font-family: "RobotoLight";
     }
+  }
+  .link {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background-color: #7a8566;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(0.975);
+      opacity: 0.95;
+    }
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    .gatsbyimg {
+      width: 100%;
+      height: 100%;
+    }
+  }
 }

@@ -91,7 +91,7 @@ function Detail({ data, imageSrc, close }) {
                       {discount.apply ? (
                         <>
                           {`${discountAmount} руб. `}
-                          <span className={oldprice}>{price}</span>
+                          <s>{price} руб.</s>
                         </>
                       ) : (
                         `${price} руб.`

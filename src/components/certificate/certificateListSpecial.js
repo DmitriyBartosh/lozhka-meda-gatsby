@@ -156,7 +156,7 @@ function CertificateListSpecial() {
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
-                                <span>{item.price}</span>
+                                <s>{item.price}</s>
                               </p>
                               {`${item.time}`}
                               <br />
@@ -254,7 +254,7 @@ function CertificateListSpecial() {
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
-                                <span>{item.price}</span>
+                                <s>{item.price}</s>
                               </p>
                               {`${item.time}`}
                               <br />
@@ -335,7 +335,7 @@ function CertificateListSpecial() {
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
-                                <span>{item.price}</span>
+                                <s>{item.price}</s>
                               </p>
                               {`${item.time}`}
                               <br />
