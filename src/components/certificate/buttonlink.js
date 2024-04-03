@@ -8,10 +8,10 @@ function Buttonlink() {
     <div className={styles.container}>
       <div className={styles.title}>
         <h2>
-          <span>Весенние скидки</span> на подарочные сертификаты
+          <span>Весенние скидки</span> на сертификат банановый рай
         </h2>
       </div>
-      <div className={styles.subtitle}>скидка действует до 2 марта</div>
+      <div className={styles.subtitle}>скидка действует до конца марта</div>
       <div className={styles.description}>
         <p>Выберите подходящий сертификат и оформите покупку онлайн.</p>
       </div>

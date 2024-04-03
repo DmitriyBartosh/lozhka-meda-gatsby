@@ -56,8 +56,6 @@ function Form() {
           <a href="tel:+79631912128">+7 (963) 191-21-28</a>
           <br />
           <a href="tel:+73912712128">+7 (391) 271-21-28</a>
-          <br />
-          <a href="tel:+79676127339">+7 (967) 612-73-39</a>
         </p>
       </div>
       <div className={right}>

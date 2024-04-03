@@ -279,7 +279,7 @@
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 2999
           },
