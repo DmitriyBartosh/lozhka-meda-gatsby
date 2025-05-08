@@ -3,7 +3,7 @@
     "title": "Здоровая спина",
     "short_description": "Включает техники классического и восточного гуаша",
     "short_cost": {
-      "price": "1449 руб.",
+      "price": "1900 руб.",
       "time": "1 час",
       "quantity": 1
     },
@@ -14,7 +14,7 @@
           "percent": false,
           "count": 1349
         },
-        "price": 1449,
+        "price": 1900,
         "time": "1 час",
         "quantity": "1 человек"
       }
@@ -27,7 +27,7 @@
     "title": "Здоровая спина в перерыве на обед",
     "short_description": "Отлично подойдёт для офисных сотрудников и не только",
     "short_cost": {
-      "price": "699 руб.",
+      "price": "840 руб.",
       "time": "30 мин",
       "quantity": 1
     },
@@ -38,7 +38,7 @@
           "percent": false,
           "count": 699
         },
-        "price": 699,
+        "price": 840,
         "time": "30 мин",
         "quantity": "1 человек"
       }
@@ -75,7 +75,7 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 1 человека",
     "short_cost": {
-      "price": "1599 руб.",
+      "price": "2000 руб.",
       "time": "1 час",
       "quantity": 1
     },
@@ -86,7 +86,7 @@
           "percent": false,
           "count": 1399
         },
-        "price": 1599,
+        "price": 2000,
         "time": "1 час",
         "quantity": "1 человек"
       }
@@ -99,7 +99,7 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 2 человека.",
     "short_cost": {
-      "price": "4949 руб.",
+      "price": "6500 руб.",
       "time": "2 час",
       "quantity": 2
     },
@@ -107,10 +107,10 @@
       {
         "discount": {
           "apply": false,
-          "percent": true,
-          "count": 10
+          "percent": false,
+          "count": 4300
         },
-        "price": 4949,
+        "price": 6500,
         "time": "2 часа",
         "quantity": "2 человека"
       }
@@ -123,8 +123,8 @@
     "title": "Классический массаж всего тела ",
     "short_description": "Массаж является средством профилактики заболеваний, залогом долговременного сохранения работоспособности. Программа рассчитана на 1 человека.",
     "short_cost": {
-      "price": "от 489 руб.",
-      "time": "от 15 мин.",
+      "price": "2100 руб.",
+      "time": "1 час",
       "quantity": 1
     },
     "cost": [
@@ -134,48 +134,8 @@
           "percent": true,
           "count": 10
         },
-        "price": 489,
-        "time": "15 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 649,
-        "time": "20 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 999,
-        "time": "30 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 1459,
-        "time": "45 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 1949,
-        "time": "60 мин.",
+        "price": 2100,
+        "time": "1 час",
         "quantity": "1 человек"
       }
     ],
@@ -187,8 +147,8 @@
     "title": "Массаж лица",
     "short_description": "Массаж лица по классической технике улучшает кровообращение, помогает предотвратить появление морщин и повышает тонус кожи. Программа рассчитана на 1 человека",
     "short_cost": {
-      "price": "от 499 руб.",
-      "time": "от 15 мин.",
+      "price": "2100 руб.",
+      "time": "1 час",
       "quantity": 1
     },
     "cost": [
@@ -198,38 +158,8 @@
           "percent": true,
           "count": 10
         },
-        "price": 499,
-        "time": "15 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 669,
-        "time": "20 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 999,
-        "time": "30 мин.",
-        "quantity": "1 человек"
-      },
-      {
-        "discount": {
-          "apply": false,
-          "percent": true,
-          "count": 10
-        },
-        "price": 1999,
-        "time": "60 мин.",
+        "price": 2100,
+        "time": "1 час",
         "quantity": "1 человек"
       }
     ],

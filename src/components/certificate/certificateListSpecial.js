@@ -102,7 +102,7 @@ function CertificateListSpecial() {
                 handleService(
                   `Сертификат номинальный на ${nominalValue} руб.`,
                   Number(nominalValue),
-                  "https://lmmassage.ru/certificate/sertifikat_nominalnyj.pdf"
+                  "https://yourselfmassage.ru/certificate/sertifikat_nominalnyj.pdf"
                 )
               }
             >

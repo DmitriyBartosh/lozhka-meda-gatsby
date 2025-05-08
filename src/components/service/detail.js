@@ -16,7 +16,6 @@ import {
   orderInfo,
   included,
   programm,
-  oldprice,
 } from "./detail.module.scss";
 import "swiper/css";
 
