@@ -104,10 +104,24 @@
       .description {
         position: relative;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
         padding: 0px 30px;
         @media (max-width: $mobile) {
           padding-left: 20px;
+        }
+        .special {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 16px;
+          border: 1px solid rgba(255, 255, 255, 0.75);
+          border-radius: 15px;
+          margin-bottom: 1rem;
+          @media (max-width: $mobile) {
+            margin-top: 1rem;
+          }
         }
       }
       .cost {

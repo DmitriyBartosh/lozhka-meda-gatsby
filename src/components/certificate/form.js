@@ -19,23 +19,47 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
     formState: { errors },
   } = useForm({ mode: "onBlur" });
 
-  const url = "/api/pay.php";
+  // const url = "/api/pay.php";
+
+  // const onSubmit = (data) =>
+  //   axios
+  //     .post(url, {
+  //       service_name:
+  //         `${serviceInfo}, ` +
+  //         `${data.name}, ` +
+  //         `${data.surname}, ` +
+  //         `${data.phone}, ` +
+  //         `${data.message}. ` +
+  //         `На сумму: ${price} руб.`,
+  //       service_price: price,
+  //       redirect_url: redirectUrl,
+  //     })
+  //     .then(function (e) {
+  //       window.location.href = e.data;
+  //     });
+
+  const url = "/api/telegram.php";
+
+  console.log(serviceInfo);
 
   const onSubmit = (data) =>
     axios
       .post(url, {
-        service_name:
-          `${serviceInfo}, ` +
-          `${data.name}, ` +
-          `${data.surname}, ` +
-          `${data.phone}, ` +
-          `${data.message}. ` +
-          `На сумму: ${price} руб.`,
-        service_price: price,
-        redirect_url: redirectUrl,
+        telegram_message:
+          "Заявка с сайта" +
+          "%0A" +
+          `Сертификат - ${serviceInfo}` +
+          "%0A" +
+          `${data.name} / ` +
+          `${data.surname}` +
+          "%0A" +
+          `${data.phone}` +
+          "%0A" +
+          `${data.message}`,
       })
-      .then(function (e) {
-        window.location.href = e.data;
+      .then(function () {
+        closeForm();
+        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
       });
 
   return (
@@ -118,12 +142,15 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
           <br />с <Link to="/policy/">политикой конфиденциальности</Link>
         </p>
         <div className={formSubmit}>
-          <button type="submit">Оплатить {price} руб.</button>
+          <button type="submit">Отправить заявку / {price} руб.</button>
         </div>
         <div className={memo}>
           <p>
-            Обязательно <span>укажите почту при оплате</span> для получения чека
-            на сертификат. <br />
+            После отправки заявки наш специиалист свяжется с Вами для уточнения
+            всех деталей.
+            <br />
+            {/* Обязательно <span>укажите почту при оплате</span> для получения чека
+            на сертификат. <br /> */}
             <br /> По любым возникшим вопросам можно обращаться напрямую или
             оставить заявку.
           </p>

@@ -70,8 +70,8 @@ function CertificateListSpecial() {
           Сертификат действует до полного использования. Срок действия 6 месяцев
           с даты выдачи; Возврату и обмену на денежные средства не подлежит,
           возможна передача третьим лицам. Сертификат отдается в электронном или
-          печатном виде, после покупки с вами свяжется менеджер для уточнения
-          всех вопросов.
+          печатном виде, после отправки заявки с вами свяжется менеджер для
+          уточнения всех вопросов.
         </p>
         <StaticImage
           src="../../images/certificate/nominal.jpg"
@@ -118,7 +118,7 @@ function CertificateListSpecial() {
             Сертификат действует до полного использования. Срок действия 6
             месяцев с даты выдачи; Возврату и обмену на денежные средства не
             подлежит, возможна передача третьим лицам. Сертификат отдается в
-            электронном или печатном виде, после покупки с вами свяжется
+            электронном или печатном виде, после отправки заявки с вами свяжется
             менеджер для уточнения всех вопросов.
           </p>
         </div>
@@ -127,13 +127,13 @@ function CertificateListSpecial() {
             <IoArrowDown className={scrolldown} />
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
-              {massage_data.map((item, index) => {
+              {massage_data.map((item, i) => {
                 const { title, cost, certificate } = item;
 
                 return (
-                  <>
+                  <div key={`certificatesMassageList_${i}`}>
                     <h3>{title}</h3>
-                    <div className={servicecontainer} key={index}>
+                    <div className={servicecontainer}>
                       {cost.map((item, index) => {
                         const { discount, price } = item;
                         const isDiscount = discount.apply;
@@ -152,7 +152,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonMassageCertificate_${index}`}
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
@@ -174,7 +174,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonMassageCertificate_${index}`}
                             >
                               {`${item.price} руб.`}
                               <br />
@@ -186,7 +186,7 @@ function CertificateListSpecial() {
                         }
                       })}
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -208,7 +208,7 @@ function CertificateListSpecial() {
             Сертификат действует до полного использования. Срок действия 6
             месяцев с даты выдачи; Возврату и обмену на денежные средства не
             подлежит, возможна передача третьим лицам. Сертификат отдается в
-            электронном или печатном виде, после покупки с вами свяжется
+            электронном или печатном виде, после отправки заявки с вами свяжется
             менеджер для уточнения всех вопросов.
           </p>
         </div>
@@ -229,7 +229,7 @@ function CertificateListSpecial() {
                 const { title, cost, certificate } = item;
 
                 return (
-                  <>
+                  <div key={`certificatesRelaxspaList_${i}`}>
                     <h3>{title}</h3>
                     <div className={servicecontainer}>
                       {cost.map((item, index) => {
@@ -250,7 +250,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaCertificate_${index}`}
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
@@ -272,7 +272,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaCertificate_${index}`}
                             >
                               {`${item.price} руб.`}
                               <br />
@@ -284,7 +284,7 @@ function CertificateListSpecial() {
                         }
                       })}
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -298,7 +298,7 @@ function CertificateListSpecial() {
             Сертификат действует до полного использования. Срок действия 6
             месяцев с даты выдачи; Возврату и обмену на денежные средства не
             подлежит, возможна передача третьим лицам. Сертификат отдается в
-            электронном или печатном виде, после покупки с вами свяжется
+            электронном или печатном виде, после отправки заявки с вами свяжется
             менеджер для уточнения всех вопросов.
           </p>
         </div>
@@ -306,14 +306,14 @@ function CertificateListSpecial() {
           <div className={left}>
             <h2>Выберите услугу</h2>
             <div className={selectcontainer}>
-              {relaxspa_data.man.map((item, index) => {
+              {relaxspa_data.man.map((item, i) => {
                 const { title, cost, certificate } = item;
 
                 return (
-                  <>
+                  <div key={`certificatesRelaxspaForManList_${i}`}>
                     <h3>{title}</h3>
                     <div className={servicecontainer}>
-                      {cost.map((item) => {
+                      {cost.map((item, index) => {
                         const { discount, price } = item;
                         const isDiscount = discount.apply;
                         const discountAmount = discount.percent
@@ -331,7 +331,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaForManCertificate_${index}`}
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
@@ -353,7 +353,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaForManCertificate_${index}`}
                             >
                               {`${item.price} руб.`}
                               <br />
@@ -365,7 +365,7 @@ function CertificateListSpecial() {
                         }
                       })}
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>
@@ -387,7 +387,7 @@ function CertificateListSpecial() {
             Сертификат действует до полного использования. Срок действия 6
             месяцев с даты выдачи; Возврату и обмену на денежные средства не
             подлежит, возможна передача третьим лицам. Сертификат отдается в
-            электронном или печатном виде, после покупки с вами свяжется
+            электронном или печатном виде, после отправки заявки с вами свяжется
             менеджер для уточнения всех вопросов.
           </p>
         </div>
@@ -408,7 +408,7 @@ function CertificateListSpecial() {
                 const { title, cost, certificate } = item;
 
                 return (
-                  <>
+                  <div key={`certificatesRelaxspaWomanList_${i}`}>
                     <h3>{title}</h3>
                     <div className={servicecontainer}>
                       {cost.map((item, index) => {
@@ -429,7 +429,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaForWomanCertificate_${index}`}
                             >
                               <p className={priceservice}>
                                 {`${discountAmount} руб.`}
@@ -451,7 +451,7 @@ function CertificateListSpecial() {
                                   certificate
                                 )
                               }
-                              key={index}
+                              key={`buttonRelaxspaForWomanCertificate_${index}`}
                             >
                               {`${item.price} руб.`}
                               <br />
@@ -463,7 +463,7 @@ function CertificateListSpecial() {
                         }
                       })}
                     </div>
-                  </>
+                  </div>
                 );
               })}
             </div>

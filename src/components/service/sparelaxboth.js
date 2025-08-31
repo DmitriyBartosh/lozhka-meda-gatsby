@@ -16,6 +16,7 @@ import {
   cost,
   costtext,
   time,
+  special,
 } from "./massagelist.module.scss";
 import Detail from "./detail";
 
@@ -92,6 +93,9 @@ function Sparelaxboth() {
                     <h2>{data.title}</h2>
                   </div>
                   <div className={description}>
+                    {(i === 0 || i === 1) && (
+                      <p className={special}>Без фитобочки</p>
+                    )}
                     <p>{data.short_description}</p>
                   </div>
                   <div className={cost}>
