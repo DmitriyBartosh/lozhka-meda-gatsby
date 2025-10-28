@@ -19,48 +19,47 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
     formState: { errors },
   } = useForm({ mode: "onBlur" });
 
-  // const url = "/api/pay.php";
-
-  // const onSubmit = (data) =>
-  //   axios
-  //     .post(url, {
-  //       service_name:
-  //         `${serviceInfo}, ` +
-  //         `${data.name}, ` +
-  //         `${data.surname}, ` +
-  //         `${data.phone}, ` +
-  //         `${data.message}. ` +
-  //         `На сумму: ${price} руб.`,
-  //       service_price: price,
-  //       redirect_url: redirectUrl,
-  //     })
-  //     .then(function (e) {
-  //       window.location.href = e.data;
-  //     });
-
-  const url = "/api/telegram.php";
-
-  console.log(serviceInfo);
+  const url = "/api/pay.php";
 
   const onSubmit = (data) =>
     axios
       .post(url, {
-        telegram_message:
-          "Заявка с сайта" +
-          "%0A" +
-          `Сертификат - ${serviceInfo}` +
-          "%0A" +
-          `${data.name} / ` +
-          `${data.surname}` +
-          "%0A" +
-          `${data.phone}` +
-          "%0A" +
-          `${data.message}`,
+        client_phone: data.phone,
+        service_name:
+          `${serviceInfo}, ` +
+          `${data.name}, ` +
+          `${data.surname}, ` +
+          `${data.phone}, ` +
+          `${data.message}. ` +
+          `На сумму: ${price} руб.`,
+        service_price: price,
+        redirect_url: redirectUrl,
       })
-      .then(function () {
-        closeForm();
-        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+      .then(function (e) {
+        window.location.href = e.data;
       });
+
+  // const url = "/api/telegram.php";
+
+  // const onSubmit = (data) =>
+  //   axios
+  //     .post(url, {
+  //       telegram_message:
+  //         "Заявка с сайта" +
+  //         "%0A" +
+  //         `Сертификат - ${serviceInfo}` +
+  //         "%0A" +
+  //         `${data.name} / ` +
+  //         `${data.surname}` +
+  //         "%0A" +
+  //         `${data.phone}` +
+  //         "%0A" +
+  //         `${data.message}`,
+  //     })
+  //     .then(function () {
+  //       closeForm();
+  //       alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+  //     });
 
   return (
     <div className={background}>
@@ -142,12 +141,13 @@ function Form({ serviceInfo, price, redirectUrl, closeForm }) {
           <br />с <Link to="/policy/">политикой конфиденциальности</Link>
         </p>
         <div className={formSubmit}>
-          <button type="submit">Отправить заявку / {price} руб.</button>
+          <button type="submit">Оплатить {price} руб.</button>
         </div>
         <div className={memo}>
           <p>
-            После отправки заявки наш специиалист свяжется с Вами для уточнения
-            всех деталей.
+            Обязательно <span>укажите почту при оплате</span> для получения чека
+            на сертификат.
+            <br />
             <br />
             {/* Обязательно <span>укажите почту при оплате</span> для получения чека
             на сертификат. <br /> */}

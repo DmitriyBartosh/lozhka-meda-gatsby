@@ -8,10 +8,10 @@ function Buttonlink() {
     <div className={styles.container}>
       <div className={styles.title}>
         <h2>
-          <span>Летние скидки</span> на сертификаты
+          <span>Осенние скидки</span> на сертификаты
         </h2>
       </div>
-      <div className={styles.subtitle}>скидки действуют до конца августа</div>
+      <div className={styles.subtitle}>скидки действуют до конца октября</div>
       <div className={styles.description}>
         <p>Выберите подходящий сертификат и оформите покупку онлайн.</p>
       </div>

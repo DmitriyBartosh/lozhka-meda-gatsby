@@ -1,5 +1,64 @@
 [
   {
+    "title": "Массаж спины",
+    "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.",
+    "short_cost": {
+      "price": "1500 руб. <s>1670 руб.</s>",
+      "time": "40мин",
+      "quantity": 1
+    },
+    "cost": [
+      {
+        "discount": {
+          "apply": true,
+          "percent": false,
+          "count": 1500
+        },
+        "price": 1670,
+        "time": "40мин",
+        "quantity": "1 человек"
+      }
+    ],
+    "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p>",
+    "programm": "<h3>Программа:</h3><br/><p>// Массаж спины 40 мин.<br/>// Чаепитие</p>",
+    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina.pdf"
+  },
+  {
+    "title": "Массаж спины",
+    "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.",
+    "short_cost": {
+      "price": "от 2500 руб.",
+      "time": "1 час",
+      "quantity": 1
+    },
+    "cost": [
+      {
+        "discount": {
+          "apply": false,
+          "percent": false,
+          "count": 2000
+        },
+        "price": 2500,
+        "time": "1 час",
+        "quantity": "1 человек"
+      },
+      {
+        "discount": {
+          "apply": false,
+          "percent": false,
+          "count": 3900
+        },
+        "price": 5000,
+        "time": "1 час",
+        "quantity": "2 человека"
+      }
+    ],
+    "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p>",
+    "programm": "<h3>Программа:</h3><br/><p>// Массаж спины 60 мин.<br/>// Чаепитие</p>",
+    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina.pdf"
+  },
+
+  {
     "title": "Здоровая спина",
     "short_description": "Включает техники классического и восточного гуаша",
     "short_cost": {
@@ -99,16 +158,16 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 2 человека.",
     "short_cost": {
-      "price": "6500 руб.",
+      "price": "5900 руб. <s>6500 руб.</s>",
       "time": "2 час",
       "quantity": 2
     },
     "cost": [
       {
         "discount": {
-          "apply": false,
+          "apply": true,
           "percent": false,
-          "count": 4300
+          "count": 5900
         },
         "price": 6500,
         "time": "2 часа",

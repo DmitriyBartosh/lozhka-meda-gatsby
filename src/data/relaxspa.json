@@ -4,16 +4,16 @@
       "title": "Эфир тропиков",
       "short_description": "Мечтаете о перезагрузке? Наша новая программа — это именно то, что нужно!",
       "short_cost": {
-        "price": "от 4500 руб.",
+        "price": "от 3500 руб. <s>4500 руб.</s>",
         "time": "2 часа",
         "quantity": 1
       },
       "cost": [
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
-            "count": 4500
+            "count": 3500
           },
           "price": 4500,
           "time": "2 часа",
@@ -21,9 +21,9 @@
         },
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
-            "count": 8500
+            "count": 6900
           },
           "price": 8500,
           "time": "2 часа",
@@ -40,7 +40,7 @@
       "short_description": "Идеальный формат, чтобы перезагрузиться после тяжелой недели и восстановить внутренний баланс.",
       "short_cost": {
         "price": "от 4500 руб.",
-        "time": "1ч.20мин",
+        "time": "2 часа",
         "quantity": 1
       },
       "cost": [
@@ -48,20 +48,20 @@
           "discount": {
             "apply": false,
             "percent": false,
-            "count": 4500
+            "count": 3500
           },
           "price": 4500,
-          "time": "1ч.20мин",
+          "time": "2 часа",
           "quantity": "1 человек"
         },
         {
           "discount": {
             "apply": false,
             "percent": false,
-            "count": 8500
+            "count": 6900
           },
           "price": 8500,
-          "time": "1ч.20мин",
+          "time": "2 часа",
           "quantity": "2 человек"
         }
       ],
@@ -244,8 +244,8 @@
       "title": "Программа Банановый рай",
       "short_description": "Масла банана снимут чувство беспокойства и стресса. Предотвратят потерю влаги и появление морщин, восстановят свежесть и жизненную силу. Рассчитана на 1 или 2 человека",
       "short_cost": {
-        "price": "от 3500 руб <s>4200 руб.</s>",
-        "time": "2 часа",
+        "price": "от 3900 руб. <s>4800 руб.</s>",
+        "time": "2ч.30мин",
         "quantity": 2
       },
       "cost": [
@@ -253,20 +253,20 @@
           "discount": {
             "apply": true,
             "percent": false,
-            "count": 3500
+            "count": 3900
           },
-          "price": 4200,
-          "time": "2 часа",
+          "price": 4800,
+          "time": "2ч.30мин",
           "quantity": "1 человек"
         },
         {
           "discount": {
             "apply": true,
             "percent": false,
-            "count": 6900
+            "count": 7500
           },
-          "price": 8000,
-          "time": "2 часа",
+          "price": 9000,
+          "time": "2ч.30мин",
           "quantity": "2 человек"
         }
       ],
@@ -278,14 +278,14 @@
       "title": "Программа Волшебные камни",
       "short_description": "Даже после одной процедуры вы отметите позитивное  влияние массажа не только на тело, но и на \"душу\", психику. Рассчитана на 1 или 2 человека.",
       "short_cost": {
-        "price": "от 3200 руб. <s>3650 руб.</s>",
+        "price": "от 3650 руб.",
         "time": "2 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 3200
           },
@@ -295,7 +295,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 6200
           },
@@ -346,14 +346,14 @@
       "title": "Супер SPA для пары",
       "short_description": "Снимите напряжение от повседневных забот с себя и близкого вам человека, подарите волшебные минуты расслабления, наполненные чарующими ароматами.",
       "short_cost": {
-        "price": "10000 руб. <s>12500 руб.</s>",
+        "price": "12500 руб.",
         "time": "3 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 10000
           },
@@ -370,14 +370,14 @@
       "title": "Супер SPA для одного",
       "short_description": "Снимите напряжение от повседневных забот с себя и близкого вам человека, подарите волшебные минуты расслабления, наполненные чарующими ароматами.",
       "short_cost": {
-        "price": "5500 руб. <s>6500 руб.</s>",
+        "price": "6500 руб.",
         "time": "3 часа",
         "quantity": 1
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 5500
           },
