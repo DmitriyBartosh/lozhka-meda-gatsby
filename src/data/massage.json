@@ -3,14 +3,14 @@
     "title": "Массаж спины",
     "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.",
     "short_cost": {
-      "price": "1500 руб. <s>1670 руб.</s>",
+      "price": "1670 руб.",
       "time": "40мин",
       "quantity": 1
     },
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": false,
           "count": 1500
         },
@@ -55,9 +55,8 @@
     ],
     "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p>",
     "programm": "<h3>Программа:</h3><br/><p>// Массаж спины 60 мин.<br/>// Чаепитие</p>",
-    "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina.pdf"
+    "certificate": "https://yourselfmassage.ru/certificate/massage_spini.pdf"
   },
-
   {
     "title": "Здоровая спина",
     "short_description": "Включает техники классического и восточного гуаша",
@@ -131,7 +130,7 @@
     "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina_polny_komplex.pdf"
   },
   {
-    "title": "Таёжная сказка",
+    "title": "Таёжная сказка лайт",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 1 человека",
     "short_cost": {
       "price": "2000 руб.",
@@ -158,14 +157,14 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 2 человека.",
     "short_cost": {
-      "price": "5900 руб. <s>6500 руб.</s>",
+      "price": "6500 руб.",
       "time": "2 час",
       "quantity": 2
     },
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": false,
           "count": 5900
         },
@@ -179,7 +178,7 @@
     "certificate": "https://yourselfmassage.ru/certificate/taezhnaya_skazka_2.pdf"
   },
   {
-    "title": "Классический массаж всего тела ",
+    "title": "Классический массаж всего тела",
     "short_description": "Массаж является средством профилактики заболеваний, залогом долговременного сохранения работоспособности. Программа рассчитана на 1 человека.",
     "short_cost": {
       "price": "2500 руб.",

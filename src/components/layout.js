@@ -8,6 +8,7 @@ import Footer from "./footer";
 import Navigation from "./navigation";
 import Buttonlink from "../components/certificate/buttonlink";
 import MetaTag from "./metaTag";
+import Promocard from "../components/promocard";
 
 function Layout({ children }) {
   const { width } = useWindowSize();
@@ -26,6 +27,7 @@ function Layout({ children }) {
       <Header />
       <main className={main}>
         <Title />
+        <Promocard />
         <Buttonlink />
         <Navigation />
 

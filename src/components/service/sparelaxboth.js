@@ -93,7 +93,7 @@ function Sparelaxboth() {
                     <h2>{data.title}</h2>
                   </div>
                   <div className={description}>
-                    {(i === 0 || i === 1) && (
+                    {(i === 1 || i === 3) && (
                       <p className={special}>Без фитобочки</p>
                     )}
                     <p>{data.short_description}</p>

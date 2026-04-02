@@ -1,0 +1,91 @@
+@import "../style/abstracts/variables.scss";
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    border-radius: 2rem;
+    overflow: hidden;
+    margin-top: 75px;
+    padding: 3rem 2rem;
+    @media (max-width: $tablet) {
+        border-radius: 2rem;
+        overflow: hidden;
+        padding: 3rem 2rem;
+        width: 70vw;
+        max-width: 400px;
+        margin: 0px auto;
+        margin-bottom: 50px;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+    @media (max-width: $mobile) {
+        width: 90vw;
+        width: calc(100vw - 20px);
+        margin: 0px auto;
+        margin-bottom: 50px;
+    }
+    .title {
+        h2 {
+            font-family: "BebasNeue";
+            text-align: center;
+
+            line-height: 1;
+            color: #603117;
+            font-size: 5rem;
+            @media (max-width: $tablet) {
+                font-size: 3rem;
+            }
+        }
+    }
+    .subtitle {
+        font-family: "BebasNeue";
+        color: #ac7f2e;
+        font-size: 2.5rem;
+        margin: 0.5rem 0;
+        @media (max-width: $mobile) {
+            font-size: 1.75rem;
+            margin: 1rem 0;
+        }
+    }
+    .description {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        max-width: 600px;
+        p {
+            text-align: center;
+            font-family: "RobotoLight";
+        }
+    }
+    .link {
+        position: relative;
+        display: inline-block;
+        padding: 15px 30px;
+        color: white;
+        border-radius: 30px;
+        text-transform: uppercase;
+        background-color: #7a8566;
+        font-size: 1.25rem;
+        line-height: 1.25rem;
+        transition: all 0.4s;
+        &:hover {
+            transform: scale(0.975);
+            opacity: 0.95;
+        }
+    }
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        .gatsbyimg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
