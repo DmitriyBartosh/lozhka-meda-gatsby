@@ -72,14 +72,14 @@
       "title": "SPA программа LAVANDO KES",
       "short_description": "Расслабляющий комплекс процедур с ароматом горной лаванды, направленный на восстановление сил и снятие напряжения.",
       "short_cost": {
-        "price": "от 3500 руб. <s>4500 руб.</s>",
+        "price": "от 4000 руб.",
         "time": "2 часа",
         "quantity": 1
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 3500
           },
@@ -89,7 +89,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 6900
           },
@@ -140,14 +140,14 @@
       "title": "SPA программа Light",
       "short_description": "Программа снимает стресс и усталость, улучшает кровообращение и расслабляет мышцы. Идеально при напряжении и хронической усталости.",
       "short_cost": {
-        "price": "от 2300 руб. <s>2700 руб.</s>",
+        "price": "от 2700 руб.",
         "time": "1 часа",
         "quantity": 1
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 2300
           },
@@ -157,7 +157,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 4500
           },
@@ -310,14 +310,14 @@
       "title": "Программа Банановый рай",
       "short_description": "Масла банана снимут чувство беспокойства и стресса. Предотвратят потерю влаги и появление морщин, восстановят свежесть и жизненную силу. Рассчитана на 1 или 2 человека",
       "short_cost": {
-        "price": "от 4000 руб. <s>4500 руб.</s>",
+        "price": "от 4500 руб.",
         "time": "2ч.30мин",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 4000
           },
@@ -327,7 +327,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 7900
           },
@@ -344,16 +344,16 @@
       "title": "Программа Волшебные камни",
       "short_description": "Даже после одной процедуры вы отметите позитивное  влияние массажа не только на тело, но и на \"душу\", психику. Рассчитана на 1 или 2 человека.",
       "short_cost": {
-        "price": "от 4000 руб.",
+        "price": "от 3600 руб <s>4000 руб.</s>",
         "time": "2 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
-            "count": 3200
+            "count": 3600
           },
           "price": 4000,
           "time": "2 часа",
@@ -361,9 +361,9 @@
         },
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
-            "count": 6200
+            "count": 7500
           },
           "price": 7900,
           "time": "2 часа",
