@@ -3,20 +3,30 @@
     "title": "Массаж спины",
     "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.",
     "short_cost": {
-      "price": "1670 руб.",
+      "price": "от 1500 руб. <s>1670 руб.</s>",
       "time": "40мин",
       "quantity": 1
     },
     "cost": [
       {
         "discount": {
-          "apply": false,
+          "apply": true,
           "percent": false,
           "count": 1500
         },
         "price": 1670,
         "time": "40мин",
         "quantity": "1 человек"
+      },
+      {
+        "discount": {
+          "apply": true,
+          "percent": false,
+          "count": 2900
+        },
+        "price": 3340,
+        "time": "40мин",
+        "quantity": "2 человек"
       }
     ],
     "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p>",

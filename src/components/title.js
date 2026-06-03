@@ -2,6 +2,7 @@ import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { IoCall, IoLogoVk } from "react-icons/io5";
+import { FaTelegramPlane } from "react-icons/fa";
 import {
   container,
   background,
@@ -62,6 +63,27 @@ function Title() {
           className={link}
         >
           <IoLogoVk />
+        </a>
+        <a
+          href="https://t.me/yourselfmassage24"
+          target="_blank"
+          rel="noreferrer"
+          className={link}
+        >
+          <FaTelegramPlane />
+        </a>
+        <a
+          href="https://max.ru/u/f9LHodD0cOJnLFIqVIXvoAwHYOV8xLqlW6-4f1mMERkiu1xXONur8gT8iB4"
+          target="_blank"
+          rel="noreferrer"
+          className={link}
+        >
+          <img
+            src="https://maxicons.ru/icons/Max_logo.svg"
+            alt="MAX"
+            width={32}
+            height={32}
+          />
         </a>
       </div>
 

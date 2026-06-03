@@ -208,14 +208,14 @@
       "title": "Программа Кокосовый рай",
       "short_description": "Окунись на остров райского наслаждения с ароматом кокоса. Программа рассчитана на 1 или 2 человека",
       "short_cost": {
-        "price": "от 4000 руб.",
+        "price": "от 3500 руб <s>4000 руб.</s>",
         "time": "2 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
             "count": 3500
           },
@@ -225,7 +225,7 @@
         },
         {
           "discount": {
-            "apply": false,
+            "apply": true,
             "percent": false,
             "count": 6900
           },
@@ -344,14 +344,14 @@
       "title": "Программа Волшебные камни",
       "short_description": "Даже после одной процедуры вы отметите позитивное  влияние массажа не только на тело, но и на \"душу\", психику. Рассчитана на 1 или 2 человека.",
       "short_cost": {
-        "price": "от 3600 руб <s>4000 руб.</s>",
+        "price": "от 4000 руб.",
         "time": "2 часа",
         "quantity": 2
       },
       "cost": [
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 3600
           },
@@ -361,7 +361,7 @@
         },
         {
           "discount": {
-            "apply": true,
+            "apply": false,
             "percent": false,
             "count": 7500
           },

@@ -20,28 +20,51 @@ function Form({ serviceselect, closeForm, orderDetail }) {
     formState: { errors },
   } = useForm({ mode: "onBlur" });
 
-  const url = "/api/telegram.php";
+  const telegramUrl = "/api/telegram.php";
+  const mailUrl = "/api/mail.php";
 
-  const onSubmit = (data) =>
-    axios
-      .post(url, {
-        telegram_message:
-          "Заявка с сайта" +
-          "%0A" +
-          `${serviceselect}` +
-          "%0A" +
-          `${orderDetail}` +
-          "%0A" +
-          `${data.name}` +
-          "%0A" +
-          `${data.phone}` +
-          "%0A" +
-          `${data.message}`,
-      })
-      .then(function () {
-        closeForm();
-        alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
-      });
+  const onSubmit = (data) => {
+    const telegramPayload = {
+      telegram_message:
+        "Заявка с сайта" +
+        "%0A" +
+        `${serviceselect}` +
+        "%0A" +
+        `${orderDetail}` +
+        "%0A" +
+        `${data.name}` +
+        "%0A" +
+        `${data.phone}` +
+        "%0A" +
+        `${data.message}`,
+    };
+
+    const mailPayload = {
+      serviceselect,
+      orderDetail,
+      name: data.name,
+      phone: data.phone,
+      message: data.message,
+    };
+
+    // Отправляем одновременно в Telegram и на почту
+    Promise.allSettled([
+      // axios.post(telegramUrl, telegramPayload),
+      axios.post(mailUrl, mailPayload),
+    ]).then((results) => {
+      const allFailed = results.every((r) => r.status === "rejected");
+
+      if (allFailed) {
+        alert(
+          "Произошла ошибка при отправке заявки. Пожалуйста, свяжитесь с нами напрямую.",
+        );
+        return;
+      }
+
+      closeForm();
+      alert("Спасибо за заявку! В ближайшее время мы свяжемся с Вами.");
+    });
+  };
 
   return (
     <div className={form}>
