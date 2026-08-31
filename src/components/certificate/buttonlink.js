@@ -11,7 +11,7 @@ function Buttonlink() {
           <span>Летние скидки</span> на сертификаты
         </h2>
       </div>
-      <div className={styles.subtitle}>скидки действуют до конца июня</div>
+      <div className={styles.subtitle}>скидки действуют до конца августа</div>
       <div className={styles.description}>
         <p>Выберите подходящий сертификат и оформите покупку онлайн.</p>
       </div>

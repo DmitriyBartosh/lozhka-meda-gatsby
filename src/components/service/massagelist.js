@@ -90,7 +90,11 @@ function Massagelist() {
                     <h2>{data.title}</h2>
                   </div>
                   <div className={description}>
-                    <p>{data.short_description}</p>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: data.short_description,
+                      }}
+                    />
                   </div>
                   <div className={cost}>
                     <div className={price_item}>

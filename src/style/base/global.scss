@@ -31,3 +31,21 @@ main {
     background-color: rgba(255, 255, 255, 0.15);
   }
 }
+
+.promotion_short {
+  border: 1px solid $gray;
+  padding: 6px 12px;
+  border-radius: 16px;
+}
+
+.promotion {
+  margin-top: 10px;
+  background-color: $brown;
+  color: $gray;
+  padding: 6px 12px;
+  border-radius: 16px;
+  span {
+    font-weight: 800;
+    color: white;
+  }
+}

@@ -1,16 +1,26 @@
 [
   {
     "title": "Массаж спины",
-    "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.",
+    "short_description": "Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.<br/><br/><span class=\"promotion_short\">4 сеанса + 5-й в подарок за 5000 руб.</span>",
     "short_cost": {
-      "price": "от 1500 руб. <s>1670 руб.</s>",
-      "time": "40мин",
+      "price": "от 1670 руб.",
+      "time": "от 30мин",
       "quantity": 1
     },
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
+          "percent": false,
+          "count": 2900
+        },
+        "price": 5000,
+        "time": "30мин",
+        "quantity": "5 сеансов"
+      },
+      {
+        "discount": {
+          "apply": false,
           "percent": false,
           "count": 1500
         },
@@ -20,7 +30,7 @@
       },
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": false,
           "count": 2900
         },
@@ -29,7 +39,7 @@
         "quantity": "2 человек"
       }
     ],
-    "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p>",
+    "description": "<p>Массаж спины - это глубокая работа с мышечными зажимами, которые копят ежедневный стресс.</p><p class=\"promotion\">Массаж спины <span>30 минут</span> - 4 сеанса + 5-й в подарок за <span>5000 руб.</span></p>",
     "programm": "<h3>Программа:</h3><br/><p>// Массаж спины 40 мин.<br/>// Чаепитие</p>",
     "certificate": "https://yourselfmassage.ru/certificate/zdorovaya_spina.pdf"
   },
@@ -167,14 +177,14 @@
     "title": "Таёжная сказка",
     "short_description": "Эффект массажа после фитобочки возрастает в 2 раза! Программа рассчитана на 2 человека.",
     "short_cost": {
-      "price": "5900 руб. <s>6500 руб.</s>",
+      "price": "6500 руб.",
       "time": "2 час",
       "quantity": 2
     },
     "cost": [
       {
         "discount": {
-          "apply": true,
+          "apply": false,
           "percent": false,
           "count": 5900
         },
